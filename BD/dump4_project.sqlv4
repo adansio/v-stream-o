@@ -1,0 +1,238 @@
+-- phpMyAdmin SQL Dump
+-- version 3.5.2.2
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost
+-- Tiempo de generación: 07-10-2012 a las 18:40:57
+-- Versión del servidor: 5.5.24-0ubuntu0.12.04.1
+-- Versión de PHP: 5.3.10-1ubuntu3.4
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Base de datos: `project`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `carreras`
+--
+
+CREATE TABLE IF NOT EXISTS `carreras` (
+  `cod_carrera` varchar(10) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `cod_depto` varchar(10) NOT NULL,
+  PRIMARY KEY (`cod_carrera`),
+  KEY `cod_depto` (`cod_depto`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `carreras`
+--
+
+INSERT INTO `carreras` (`cod_carrera`, `nombre`, `cod_depto`) VALUES
+('3000', 'ING CIVIL TELEMATICA', 'ELO'),
+('3199', 'ING CIVIL ELECTRONICA', 'ELO'),
+('4199', 'ING CIVIL MECANICA', 'MEC'),
+('4310', 'ING MECANICA INDUSTRIAL', 'MEC'),
+('5199', 'ING CIVIL QUIMICA', 'QUI'),
+('7399', 'ING CIVIL INFORMATICA', 'INF'),
+('7405', 'ING EJEC INFORMATICA', 'INF'),
+('8305', 'ING AMBIENTAL', 'QUI');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `departamentos`
+--
+
+CREATE TABLE IF NOT EXISTS `departamentos` (
+  `cod_depto` varchar(10) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  PRIMARY KEY (`cod_depto`),
+  KEY `cod_depto` (`cod_depto`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `departamentos`
+--
+
+INSERT INTO `departamentos` (`cod_depto`, `nombre`) VALUES
+('ARQ', 'ARQUITECTURA'),
+('CIV', 'OBRAS CIVILES'),
+('DEW', 'DEFIDER'),
+('ELI', 'ELECTRICIDAD'),
+('ELO', 'ELECTRONICA'),
+('FIS', 'FISICA'),
+('IND', 'INDUSTRIAS'),
+('INF', 'INFORMATICA'),
+('MAT', 'MATEMATICA'),
+('MEC', 'MECANICA'),
+('QUI', 'QUIMICA');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `historiales`
+--
+
+CREATE TABLE IF NOT EXISTS `historiales` (
+  `hist_id` bigint(20) unsigned NOT NULL,
+  `mail_al` varchar(50) NOT NULL,
+  `video_id` bigint(20) unsigned NOT NULL,
+  `fecha` datetime NOT NULL,
+  PRIMARY KEY (`hist_id`),
+  KEY `video_id` (`video_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ramo-usuarios`
+--
+
+CREATE TABLE IF NOT EXISTS `ramo-usuarios` (
+  `user_id` bigint(8) unsigned NOT NULL,
+  `mail` varchar(50) CHARACTER SET latin1 NOT NULL,
+  `cod_ramo` varchar(10) CHARACTER SET latin1 NOT NULL,
+  PRIMARY KEY (`user_id`),
+  KEY `cod_asignatura` (`cod_ramo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `ramo-usuarios`
+--
+
+INSERT INTO `ramo-usuarios` (`user_id`, `mail`, `cod_ramo`) VALUES
+(2, 'adan.morales@alumnos.usm.cl', 'TEL-332'),
+(3, 'cesar.hernandez@usm.cl', 'TEL-332');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ramos`
+--
+
+CREATE TABLE IF NOT EXISTS `ramos` (
+  `cod_ramo` varchar(10) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `cod_depto` varchar(10) NOT NULL,
+  PRIMARY KEY (`cod_ramo`),
+  KEY `cod_depto` (`cod_depto`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `ramos`
+--
+
+INSERT INTO `ramos` (`cod_ramo`, `nombre`, `cod_depto`) VALUES
+('ELO-212', 'LABORATORIO DE SISTEMAS DIGITALES', 'ELO'),
+('ELO-250', 'CAMPOS ELECTROMAGNETICOS', 'ELO'),
+('ELO-328', 'PROCESAMIENTO DIGITAL DE IMAGENES', 'ELO'),
+('ILI-239', 'BASES DE DATOS', 'INF'),
+('ILI-245', 'ARQUITECTURA DE COMPUTADORES', 'INF'),
+('ILI-253', 'LENGUAJES DE PROGRAMACION', 'INF'),
+('INF-343', 'SISTEMAS DISTRIBUIDOS', 'INF'),
+('TEL-241', 'LABORATORIO DE REDES DE COMPUTADORES I', 'ELO'),
+('TEL-332', 'MULTIMEDIOS', 'ELO'),
+('TEL-341', 'SIMULACION DE REDES', 'ELO');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id` bigint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) CHARACTER SET latin1 NOT NULL COMMENT 'mail',
+  `password` varchar(50) CHARACTER SET latin1 NOT NULL,
+  `nombre` varchar(50) CHARACTER SET latin1 NOT NULL,
+  `rut` varchar(9) CHARACTER SET latin1 NOT NULL,
+  `rol` varchar(10) CHARACTER SET latin1 DEFAULT NULL,
+  `tipo` int(11) NOT NULL,
+  `cod_carrera` varchar(10) CHARACTER SET latin1 NOT NULL,
+  `oficina` varchar(10) CHARACTER SET latin1 DEFAULT NULL,
+  `about` text CHARACTER SET latin1,
+  PRIMARY KEY (`user_id`),
+  KEY `cod_carrera` (`cod_carrera`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=4 ;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`user_id`, `username`, `password`, `nombre`, `rut`, `rol`, `tipo`, `cod_carrera`, `oficina`, `about`) VALUES
+(2, 'adan.morales@aumnos.usm.cl', 'wena', 'adan patricio morales cabrera', '173556292', '28300425', 1, '3000', '-', 'el mas bellaco bn ready pa toas las babies ya tu saes maznatedigoezi'),
+(3, 'cesar.hernandez@usm.cl', 'cesar hernandez', 'cesar hernandez', '123456789', NULL, 2, '3000', '-', 'profe multimedios');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `videos`
+--
+
+CREATE TABLE IF NOT EXISTS `videos` (
+  `video_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(8) unsigned NOT NULL,
+  `mail_prof` varchar(50) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `duracion` varchar(10) NOT NULL,
+  `descripcion` mediumtext NOT NULL,
+  `link` varchar(100) NOT NULL,
+  PRIMARY KEY (`video_id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `carreras`
+--
+ALTER TABLE `carreras`
+  ADD CONSTRAINT `carreras_ibfk_1` FOREIGN KEY (`cod_depto`) REFERENCES `departamentos` (`cod_depto`);
+
+--
+-- Filtros para la tabla `historiales`
+--
+ALTER TABLE `historiales`
+  ADD CONSTRAINT `historiales_ibfk_1` FOREIGN KEY (`video_id`) REFERENCES `videos` (`video_id`);
+
+--
+-- Filtros para la tabla `ramo-usuarios`
+--
+ALTER TABLE `ramo-usuarios`
+  ADD CONSTRAINT `ramo@002dusuarios_ibfk_4` FOREIGN KEY (`cod_ramo`) REFERENCES `ramos` (`cod_ramo`),
+  ADD CONSTRAINT `ramo@002dusuarios_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
+
+--
+-- Filtros para la tabla `ramos`
+--
+ALTER TABLE `ramos`
+  ADD CONSTRAINT `ramos_ibfk_1` FOREIGN KEY (`cod_depto`) REFERENCES `departamentos` (`cod_depto`);
+
+--
+-- Filtros para la tabla `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`cod_carrera`) REFERENCES `carreras` (`cod_carrera`);
+
+--
+-- Filtros para la tabla `videos`
+--
+ALTER TABLE `videos`
+  ADD CONSTRAINT `videos_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
