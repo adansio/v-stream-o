@@ -1,0 +1,764 @@
+2012-10-06 20:21:45 Error: [MissingActionException] Action VideoController::add() could not be found.
+#0 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-10-06 20:22:29 Error: [MissingActionException] Action VideoController::add() could not be found.
+#0 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-10-06 20:24:16 Error: [MissingActionException] Action VideoController::add() could not be found.
+#0 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-10-06 20:25:19 Error: [MissingActionException] Action VideoController::add() could not be found.
+#0 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-10-06 20:25:27 Error: [MissingActionException] Action VideoController::add() could not be found.
+#0 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-10-06 20:27:51 Error: [MissingControllerException] Controller class VideosController could not be found.
+#0 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-10-06 20:27:59 Error: [MissingControllerException] Controller class VideoController could not be found.
+#0 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-10-06 20:28:34 Error: [MissingActionException] Action VideoController::add() could not be found.
+#0 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(VideoController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-10-06 20:56:06 Error: [MissingControllerException] Controller class VideosController could not be found.
+#0 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-10-06 20:56:47 Error: [MissingViewException] View file "C:\xampp\htdocs\prueba2\app\View\Video\index.ctp" is missing.
+#0 C:\xampp\htdocs\prueba2\lib\Cake\View\View.php(472): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\prueba2\lib\Cake\Controller\Controller.php(957): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(VideosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-06 20:57:19 Error: [MissingControllerException] Controller class VideosController could not be found.
+#0 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-10-06 20:57:29 Error: [MissingViewException] View file "C:\xampp\htdocs\prueba2\app\View\Video\index.ctp" is missing.
+#0 C:\xampp\htdocs\prueba2\lib\Cake\View\View.php(472): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\prueba2\lib\Cake\Controller\Controller.php(957): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(VideoController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-06 21:37:40 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [C:\xampp\htdocs\prueba2\app\Controller\AppController.php, line 37]
+2012-10-06 21:37:40 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+#0 C:\xampp\htdocs\prueba2\lib\Cake\Error\ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 37)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 37, Array)
+#2 C:\xampp\htdocs\prueba2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 37, Array)
+#3 C:\xampp\htdocs\prueba2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-06 21:53:00 Error: [MissingControllerException] Controller class AddController could not be found.
+#0 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-10-06 21:53:21 Error: [MissingControllerException] Controller class ViedoController could not be found.
+#0 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-10-06 21:53:29 Error: [MissingControllerException] Controller class ViedoController could not be found.
+#0 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-10-06 21:53:38 Error: [MissingControllerException] Controller class ViedoController could not be found.
+#0 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-10-06 21:59:12 Error: [MissingActionException] Action VideoController::login() could not be found.
+#0 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(VideoController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-10-06 23:26:34 Error: Fatal Error (4): syntax error, unexpected '?>', expecting '(' in [C:\xampp\htdocs\prueba2\app\View\Video\index.ctp, line 11]
+2012-10-06 23:26:34 Error: [FatalErrorException] syntax error, unexpected '?>', expecting '('
+#0 C:\xampp\htdocs\prueba2\lib\Cake\Error\ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 11, Array)
+#2 C:\xampp\htdocs\prueba2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 11, Array)
+#3 C:\xampp\htdocs\prueba2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-06 23:27:31 Error: [MissingActionException] Action VideoController::login() could not be found.
+#0 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(VideoController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-10-06 23:27:58 Error: [MissingActionException] Action VideoController::login() could not be found.
+#0 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(VideoController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-10-06 23:34:31 Error: [MissingActionException] Action VideoController::view() could not be found.
+#0 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\prueba2\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(VideoController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\prueba2\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-10-06 23:35:29 Error: Fatal Error (1): Call to a member function read() on a non-object in [C:\xampp\htdocs\prueba2\app\Controller\VideoController.php, line 16]
+2012-10-06 23:35:29 Error: [FatalErrorException] Call to a member function read() on a non-object
+#0 C:\xampp\htdocs\prueba2\lib\Cake\Error\ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 16)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 16, Array)
+#2 C:\xampp\htdocs\prueba2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 16, Array)
+#3 C:\xampp\htdocs\prueba2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-06 23:35:42 Error: Fatal Error (1): Call to a member function read() on a non-object in [C:\xampp\htdocs\prueba2\app\Controller\VideoController.php, line 16]
+2012-10-06 23:35:42 Error: [FatalErrorException] Call to a member function read() on a non-object
+#0 C:\xampp\htdocs\prueba2\lib\Cake\Error\ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 16)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 16, Array)
+#2 C:\xampp\htdocs\prueba2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 16, Array)
+#3 C:\xampp\htdocs\prueba2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-06 23:36:37 Error: Fatal Error (1): Call to a member function read() on a non-object in [C:\xampp\htdocs\prueba2\app\Controller\VideoController.php, line 16]
+2012-10-06 23:36:37 Error: [FatalErrorException] Call to a member function read() on a non-object
+#0 C:\xampp\htdocs\prueba2\lib\Cake\Error\ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 16)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 16, Array)
+#2 C:\xampp\htdocs\prueba2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 16, Array)
+#3 C:\xampp\htdocs\prueba2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-07 00:13:25 Error: Fatal Error (1): Call to a member function read() on a non-object in [C:\xampp\htdocs\prueba2\app\Controller\VideoController.php, line 16]
+2012-10-07 00:13:25 Error: [FatalErrorException] Call to a member function read() on a non-object
+#0 C:\xampp\htdocs\prueba2\lib\Cake\Error\ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 16)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\xampp\htdocs...', 16, Array)
+#2 C:\xampp\htdocs\prueba2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\xampp\htdocs...', 16, Array)
+#3 C:\xampp\htdocs\prueba2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-07 00:19:40 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\prueba2\app\Controller\UsersController.php, line 45]
+2012-10-07 00:19:40 Error: [FatalErrorException] syntax error, unexpected ';'
+#0 C:\xampp\htdocs\prueba2\lib\Cake\Error\ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 45)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 45, Array)
+#2 C:\xampp\htdocs\prueba2\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 45, Array)
+#3 C:\xampp\htdocs\prueba2\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-07 00:07:09 Error: [MissingConnectionException] Database connection "SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)" is missing, or could not be created.
+#0 /var/www/prueba2/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/prueba2/lib/Cake/Model/ConnectionManager.php(101): DboSource->__construct(Array)
+#2 /var/www/prueba2/lib/Cake/Model/Model.php(3157): ConnectionManager::getDataSource('default')
+#3 /var/www/prueba2/lib/Cake/Model/Model.php(1092): Model->setDataSource('default')
+#4 /var/www/prueba2/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#5 /var/www/prueba2/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#6 /var/www/prueba2/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#7 /var/www/prueba2/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#8 /var/www/prueba2/app/View/Users/login.ctp(3): FormHelper->create('User')
+#9 /var/www/prueba2/lib/Cake/View/View.php(920): include('/var/www/prueba...')
+#10 /var/www/prueba2/lib/Cake/View/View.php(883): View->_evaluate('/var/www/prueba...', Array)
+#11 /var/www/prueba2/lib/Cake/View/View.php(475): View->_render('/var/www/prueba...')
+#12 /var/www/prueba2/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#13 /var/www/prueba2/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#14 /var/www/prueba2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/prueba2/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2012-10-07 00:13:11 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /var/www/prueba2/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#1 /var/www/prueba2/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /var/www/prueba2/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#3 /var/www/prueba2/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#4 /var/www/prueba2/app/View/Users/login.ctp(3): FormHelper->create('User')
+#5 /var/www/prueba2/lib/Cake/View/View.php(920): include('/var/www/prueba...')
+#6 /var/www/prueba2/lib/Cake/View/View.php(883): View->_evaluate('/var/www/prueba...', Array)
+#7 /var/www/prueba2/lib/Cake/View/View.php(475): View->_render('/var/www/prueba...')
+#8 /var/www/prueba2/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#9 /var/www/prueba2/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#10 /var/www/prueba2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/prueba2/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-10-07 00:50:54 Error: [MissingActionException] Action AppController::index() could not be found.
+#0 /var/www/prueba2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/prueba2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/prueba2/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-10-07 00:50:58 Error: [MissingActionException] Action AppController::Config() could not be found.
+#0 /var/www/prueba2/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/prueba2/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/prueba2/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-10-07 01:23:15 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /var/www/queque/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#1 /var/www/queque/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#3 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#4 /var/www/queque/app/View/Users/login.ctp(3): FormHelper->create('User')
+#5 /var/www/queque/lib/Cake/View/View.php(920): include('/var/www/queque...')
+#6 /var/www/queque/lib/Cake/View/View.php(883): View->_evaluate('/var/www/queque...', Array)
+#7 /var/www/queque/lib/Cake/View/View.php(475): View->_render('/var/www/queque...')
+#8 /var/www/queque/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#9 /var/www/queque/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#10 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-10-07 01:33:13 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /var/www/queque/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#1 /var/www/queque/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#3 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#4 /var/www/queque/app/View/Users/login.ctp(3): FormHelper->create('User')
+#5 /var/www/queque/lib/Cake/View/View.php(920): include('/var/www/queque...')
+#6 /var/www/queque/lib/Cake/View/View.php(883): View->_evaluate('/var/www/queque...', Array)
+#7 /var/www/queque/lib/Cake/View/View.php(475): View->_render('/var/www/queque...')
+#8 /var/www/queque/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#9 /var/www/queque/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#10 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-10-07 01:33:24 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /var/www/queque/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#1 /var/www/queque/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#3 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#4 /var/www/queque/app/View/Users/login.ctp(3): FormHelper->create('User')
+#5 /var/www/queque/lib/Cake/View/View.php(920): include('/var/www/queque...')
+#6 /var/www/queque/lib/Cake/View/View.php(883): View->_evaluate('/var/www/queque...', Array)
+#7 /var/www/queque/lib/Cake/View/View.php(475): View->_render('/var/www/queque...')
+#8 /var/www/queque/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#9 /var/www/queque/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#10 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-10-07 01:36:11 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /var/www/queque/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#1 /var/www/queque/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#3 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#4 /var/www/queque/app/View/Users/login.ctp(3): FormHelper->create('User')
+#5 /var/www/queque/lib/Cake/View/View.php(920): include('/var/www/queque...')
+#6 /var/www/queque/lib/Cake/View/View.php(883): View->_evaluate('/var/www/queque...', Array)
+#7 /var/www/queque/lib/Cake/View/View.php(475): View->_render('/var/www/queque...')
+#8 /var/www/queque/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#9 /var/www/queque/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#10 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-10-07 01:36:17 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /var/www/queque/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#1 /var/www/queque/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#3 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#4 /var/www/queque/app/View/Users/login.ctp(3): FormHelper->create('User')
+#5 /var/www/queque/lib/Cake/View/View.php(920): include('/var/www/queque...')
+#6 /var/www/queque/lib/Cake/View/View.php(883): View->_evaluate('/var/www/queque...', Array)
+#7 /var/www/queque/lib/Cake/View/View.php(475): View->_render('/var/www/queque...')
+#8 /var/www/queque/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#9 /var/www/queque/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#10 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-10-07 01:39:12 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /var/www/queque/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#1 /var/www/queque/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#3 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#4 /var/www/queque/app/View/Users/login.ctp(3): FormHelper->create('User')
+#5 /var/www/queque/lib/Cake/View/View.php(920): include('/var/www/queque...')
+#6 /var/www/queque/lib/Cake/View/View.php(883): View->_evaluate('/var/www/queque...', Array)
+#7 /var/www/queque/lib/Cake/View/View.php(475): View->_render('/var/www/queque...')
+#8 /var/www/queque/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#9 /var/www/queque/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#10 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-10-07 01:48:02 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /var/www/queque/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#1 /var/www/queque/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#3 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#4 /var/www/queque/app/View/Users/login.ctp(3): FormHelper->create('User')
+#5 /var/www/queque/lib/Cake/View/View.php(920): include('/var/www/queque...')
+#6 /var/www/queque/lib/Cake/View/View.php(883): View->_evaluate('/var/www/queque...', Array)
+#7 /var/www/queque/lib/Cake/View/View.php(475): View->_render('/var/www/queque...')
+#8 /var/www/queque/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#9 /var/www/queque/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#10 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-10-07 01:49:28 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /var/www/queque/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#1 /var/www/queque/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#3 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#4 /var/www/queque/app/View/Users/login.ctp(3): FormHelper->create('User')
+#5 /var/www/queque/lib/Cake/View/View.php(920): include('/var/www/queque...')
+#6 /var/www/queque/lib/Cake/View/View.php(883): View->_evaluate('/var/www/queque...', Array)
+#7 /var/www/queque/lib/Cake/View/View.php(475): View->_render('/var/www/queque...')
+#8 /var/www/queque/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#9 /var/www/queque/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#10 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-10-07 01:50:39 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /var/www/queque/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#1 /var/www/queque/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#3 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#4 /var/www/queque/app/View/Users/login.ctp(3): FormHelper->create('User')
+#5 /var/www/queque/lib/Cake/View/View.php(920): include('/var/www/queque...')
+#6 /var/www/queque/lib/Cake/View/View.php(883): View->_evaluate('/var/www/queque...', Array)
+#7 /var/www/queque/lib/Cake/View/View.php(475): View->_render('/var/www/queque...')
+#8 /var/www/queque/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#9 /var/www/queque/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#10 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-10-07 01:55:43 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /var/www/queque/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#1 /var/www/queque/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#3 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#4 /var/www/queque/app/View/Users/login.ctp(3): FormHelper->create('User')
+#5 /var/www/queque/lib/Cake/View/View.php(920): include('/var/www/queque...')
+#6 /var/www/queque/lib/Cake/View/View.php(883): View->_evaluate('/var/www/queque...', Array)
+#7 /var/www/queque/lib/Cake/View/View.php(475): View->_render('/var/www/queque...')
+#8 /var/www/queque/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#9 /var/www/queque/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#10 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-10-07 01:56:44 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /var/www/queque/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#1 /var/www/queque/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#3 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#4 /var/www/queque/app/View/Users/login.ctp(3): FormHelper->create('User')
+#5 /var/www/queque/lib/Cake/View/View.php(920): include('/var/www/queque...')
+#6 /var/www/queque/lib/Cake/View/View.php(883): View->_evaluate('/var/www/queque...', Array)
+#7 /var/www/queque/lib/Cake/View/View.php(475): View->_render('/var/www/queque...')
+#8 /var/www/queque/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#9 /var/www/queque/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#10 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-10-07 02:03:57 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /var/www/queque/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#1 /var/www/queque/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#3 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#4 /var/www/queque/app/View/Users/login.ctp(3): FormHelper->create('User')
+#5 /var/www/queque/lib/Cake/View/View.php(920): include('/var/www/queque...')
+#6 /var/www/queque/lib/Cake/View/View.php(883): View->_evaluate('/var/www/queque...', Array)
+#7 /var/www/queque/lib/Cake/View/View.php(475): View->_render('/var/www/queque...')
+#8 /var/www/queque/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#9 /var/www/queque/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#10 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-10-07 04:22:40 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /var/www/queque/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#1 /var/www/queque/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#3 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#4 /var/www/queque/app/View/Users/login.ctp(3): FormHelper->create('User')
+#5 /var/www/queque/lib/Cake/View/View.php(920): include('/var/www/queque...')
+#6 /var/www/queque/lib/Cake/View/View.php(883): View->_evaluate('/var/www/queque...', Array)
+#7 /var/www/queque/lib/Cake/View/View.php(475): View->_render('/var/www/queque...')
+#8 /var/www/queque/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#9 /var/www/queque/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#10 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-10-07 04:24:24 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /var/www/queque/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#1 /var/www/queque/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#3 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#4 /var/www/queque/app/View/Users/login.ctp(3): FormHelper->create('User')
+#5 /var/www/queque/lib/Cake/View/View.php(920): include('/var/www/queque...')
+#6 /var/www/queque/lib/Cake/View/View.php(883): View->_evaluate('/var/www/queque...', Array)
+#7 /var/www/queque/lib/Cake/View/View.php(475): View->_render('/var/www/queque...')
+#8 /var/www/queque/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#9 /var/www/queque/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#10 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-10-07 04:28:02 Error: [MissingTableException] Table users for model User was not found in datasource default.
+#0 /var/www/queque/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#1 /var/www/queque/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#3 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#4 /var/www/queque/app/View/Users/login.ctp(3): FormHelper->create('User')
+#5 /var/www/queque/lib/Cake/View/View.php(920): include('/var/www/queque...')
+#6 /var/www/queque/lib/Cake/View/View.php(883): View->_evaluate('/var/www/queque...', Array)
+#7 /var/www/queque/lib/Cake/View/View.php(475): View->_render('/var/www/queque...')
+#8 /var/www/queque/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#9 /var/www/queque/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#10 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-10-07 04:29:06 Error: [MissingConnectionException] Database connection "SQLSTATE[42000] [1049] Unknown database 'projecto'" is missing, or could not be created.
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/queque/lib/Cake/Model/ConnectionManager.php(101): DboSource->__construct(Array)
+#2 /var/www/queque/lib/Cake/Model/Model.php(3157): ConnectionManager::getDataSource('default')
+#3 /var/www/queque/lib/Cake/Model/Model.php(1092): Model->setDataSource('default')
+#4 /var/www/queque/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#5 /var/www/queque/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#6 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#7 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#8 /var/www/queque/app/View/Users/login.ctp(3): FormHelper->create('User')
+#9 /var/www/queque/lib/Cake/View/View.php(920): include('/var/www/queque...')
+#10 /var/www/queque/lib/Cake/View/View.php(883): View->_evaluate('/var/www/queque...', Array)
+#11 /var/www/queque/lib/Cake/View/View.php(475): View->_render('/var/www/queque...')
+#12 /var/www/queque/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#13 /var/www/queque/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#14 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2012-10-07 05:58:56 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'where clause'
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(1082): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/queque/lib/Cake/Model/Model.php(2630): DboSource->read(Object(User), Array)
+#5 /var/www/queque/lib/Cake/Controller/Component/Auth/BaseAuthenticate.php(89): Model->find('first', Array)
+#6 /var/www/queque/lib/Cake/Controller/Component/Auth/FormAuthenticate.php(65): BaseAuthenticate->_findUser('l??', 'lm')
+#7 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(633): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(510): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/queque/app/Controller/UsersController.php(35): AuthComponent->login()
+#10 [internal function]: UsersController->login()
+#11 /var/www/queque/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#12 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2012-10-07 06:07:45 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'where clause'
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(1082): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/queque/lib/Cake/Model/Model.php(2630): DboSource->read(Object(User), Array)
+#5 /var/www/queque/lib/Cake/Controller/Component/Auth/BaseAuthenticate.php(89): Model->find('first', Array)
+#6 /var/www/queque/lib/Cake/Controller/Component/Auth/FormAuthenticate.php(65): BaseAuthenticate->_findUser('l??', 'lm')
+#7 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(633): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(510): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/queque/app/Controller/UsersController.php(37): AuthComponent->login()
+#10 [internal function]: UsersController->login()
+#11 /var/www/queque/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#12 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2012-10-07 06:08:23 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'where clause'
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(1082): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/queque/lib/Cake/Model/Model.php(2630): DboSource->read(Object(User), Array)
+#5 /var/www/queque/lib/Cake/Controller/Component/Auth/BaseAuthenticate.php(89): Model->find('first', Array)
+#6 /var/www/queque/lib/Cake/Controller/Component/Auth/FormAuthenticate.php(65): BaseAuthenticate->_findUser('djdj', 'jj')
+#7 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(633): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(510): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/queque/app/Controller/UsersController.php(37): AuthComponent->login()
+#10 [internal function]: UsersController->login()
+#11 /var/www/queque/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#12 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2012-10-07 06:09:16 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'where clause'
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(1082): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/queque/lib/Cake/Model/Model.php(2630): DboSource->read(Object(User), Array)
+#5 /var/www/queque/lib/Cake/Controller/Component/Auth/BaseAuthenticate.php(89): Model->find('first', Array)
+#6 /var/www/queque/lib/Cake/Controller/Component/Auth/FormAuthenticate.php(65): BaseAuthenticate->_findUser('djdj', 'jj')
+#7 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(633): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(510): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/queque/app/Controller/UsersController.php(37): AuthComponent->login()
+#10 [internal function]: UsersController->login()
+#11 /var/www/queque/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#12 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2012-10-07 06:13:26 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'where clause'
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(1082): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/queque/lib/Cake/Model/Model.php(2630): DboSource->read(Object(User), Array)
+#5 /var/www/queque/lib/Cake/Controller/Component/Auth/BaseAuthenticate.php(89): Model->find('first', Array)
+#6 /var/www/queque/lib/Cake/Controller/Component/Auth/FormAuthenticate.php(65): BaseAuthenticate->_findUser('djdj', 'jj')
+#7 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(633): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(510): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/queque/app/Controller/UsersController.php(37): AuthComponent->login()
+#10 [internal function]: UsersController->login()
+#11 /var/www/queque/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#12 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2012-10-07 13:16:49 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'where clause'
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(1082): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/queque/lib/Cake/Model/Model.php(2630): DboSource->read(Object(User), Array)
+#5 /var/www/queque/lib/Cake/Controller/Component/Auth/BaseAuthenticate.php(89): Model->find('first', Array)
+#6 /var/www/queque/lib/Cake/Controller/Component/Auth/FormAuthenticate.php(65): BaseAuthenticate->_findUser('coteto', 'coteto')
+#7 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(633): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(510): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/queque/app/Controller/UsersController.php(37): AuthComponent->login()
+#10 [internal function]: UsersController->login()
+#11 /var/www/queque/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#12 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2012-10-07 13:25:33 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'where clause'
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(1082): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/queque/lib/Cake/Model/Model.php(2630): DboSource->read(Object(User), Array)
+#5 /var/www/queque/lib/Cake/Controller/Component/Auth/BaseAuthenticate.php(89): Model->find('first', Array)
+#6 /var/www/queque/lib/Cake/Controller/Component/Auth/FormAuthenticate.php(65): BaseAuthenticate->_findUser('coteto', 'coteto')
+#7 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(633): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(510): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/queque/app/Controller/UsersController.php(37): AuthComponent->login()
+#10 [internal function]: UsersController->login()
+#11 /var/www/queque/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#12 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2012-10-07 13:26:01 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'where clause'
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(1082): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/queque/lib/Cake/Model/Model.php(2630): DboSource->read(Object(User), Array)
+#5 /var/www/queque/lib/Cake/Controller/Component/Auth/BaseAuthenticate.php(89): Model->find('first', Array)
+#6 /var/www/queque/lib/Cake/Controller/Component/Auth/FormAuthenticate.php(65): BaseAuthenticate->_findUser('coteto', 'coteto')
+#7 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(633): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(510): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/queque/app/Controller/UsersController.php(37): AuthComponent->login()
+#10 [internal function]: UsersController->login()
+#11 /var/www/queque/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#12 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2012-10-07 13:58:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'where clause'
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(1082): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/queque/lib/Cake/Model/Model.php(2630): DboSource->read(Object(User), Array)
+#5 /var/www/queque/lib/Cake/Controller/Component/Auth/BaseAuthenticate.php(89): Model->find('first', Array)
+#6 /var/www/queque/lib/Cake/Controller/Component/Auth/FormAuthenticate.php(65): BaseAuthenticate->_findUser('coteto', 'coteto')
+#7 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(633): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/queque/lib/Cake/Controller/Component/AuthComponent.php(510): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/queque/app/Controller/UsersController.php(37): AuthComponent->login()
+#10 [internal function]: UsersController->login()
+#11 /var/www/queque/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#12 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#13 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#14 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2012-10-07 23:43:15 Error: [MissingConnectionException] Database connection "SQLSTATE[42000] [1115] Unknown character set: 'latin1_swedish_ci'" is missing, or could not be created.
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /var/www/queque/lib/Cake/Model/ConnectionManager.php(101): DboSource->__construct(Array)
+#2 /var/www/queque/lib/Cake/Model/Model.php(3157): ConnectionManager::getDataSource('default')
+#3 /var/www/queque/lib/Cake/Model/Model.php(1092): Model->setDataSource('default')
+#4 /var/www/queque/lib/Cake/Model/Model.php(3179): Model->setSource('users')
+#5 /var/www/queque/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#6 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(197): Model->schema()
+#7 /var/www/queque/lib/Cake/View/Helper/FormHelper.php(436): FormHelper->_introspectModel('User', 'fields')
+#8 /var/www/queque/app/View/Users/login.ctp(3): FormHelper->create('User')
+#9 /var/www/queque/lib/Cake/View/View.php(920): include('/var/www/queque...')
+#10 /var/www/queque/lib/Cake/View/View.php(883): View->_evaluate('/var/www/queque...', Array)
+#11 /var/www/queque/lib/Cake/View/View.php(475): View->_render('/var/www/queque...')
+#12 /var/www/queque/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#13 /var/www/queque/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#14 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2012-10-08 00:32:29 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/queque/app/Controller/AlumnoController.php, line 19]
+2012-10-08 00:32:29 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 /var/www/queque/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/queque...', 19)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/queque...', 19, Array)
+#2 /var/www/queque/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/queque...', 19, Array)
+#3 /var/www/queque/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-08 01:43:39 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`project`.`users`, CONSTRAINT `users_ibfk_1` FOREIGN KEY (`cod_carrera`) REFERENCES `carreras` (`cod_carrera`))
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `pr...', Array)
+#2 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(1009): DboSource->execute('INSERT INTO `pr...')
+#3 /var/www/queque/lib/Cake/Model/Model.php(1730): DboSource->create(Object(User), Array, Array)
+#4 /var/www/queque/app/Controller/UsersController.php(22): Model->save(Array)
+#5 [internal function]: UsersController->add()
+#6 /var/www/queque/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-10-08 02:34:49 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [/var/www/queque/app/Controller/AlumnoController.php, line 22]
+2012-10-08 02:34:49 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+#0 /var/www/queque/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/queque...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/queque...', 22, Array)
+#2 /var/www/queque/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/queque...', 22, Array)
+#3 /var/www/queque/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-08 02:35:25 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [/var/www/queque/app/Controller/AlumnoController.php, line 22]
+2012-10-08 02:35:25 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+#0 /var/www/queque/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/queque...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/queque...', 22, Array)
+#2 /var/www/queque/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/queque...', 22, Array)
+#3 /var/www/queque/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-08 02:35:31 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [/var/www/queque/app/Controller/AlumnoController.php, line 22]
+2012-10-08 02:35:31 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+#0 /var/www/queque/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/queque...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/queque...', 22, Array)
+#2 /var/www/queque/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/queque...', 22, Array)
+#3 /var/www/queque/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-08 02:35:34 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [/var/www/queque/app/Controller/AlumnoController.php, line 22]
+2012-10-08 02:35:34 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+#0 /var/www/queque/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/queque...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/queque...', 22, Array)
+#2 /var/www/queque/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/queque...', 22, Array)
+#3 /var/www/queque/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-08 08:47:31 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [/var/www/queque/app/Controller/AlumnoController.php, line 22]
+2012-10-08 08:47:31 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+#0 /var/www/queque/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/queque...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/queque...', 22, Array)
+#2 /var/www/queque/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/queque...', 22, Array)
+#3 /var/www/queque/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-08 12:30:00 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`project`.`users`, CONSTRAINT `users_ibfk_1` FOREIGN KEY (`carrera_id`) REFERENCES `carreras` (`id`))
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `pr...', Array)
+#2 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(1009): DboSource->execute('INSERT INTO `pr...')
+#3 /var/www/queque/lib/Cake/Model/Model.php(1730): DboSource->create(Object(User), Array, Array)
+#4 /var/www/queque/app/Controller/UsersController.php(22): Model->save(Array)
+#5 [internal function]: UsersController->add()
+#6 /var/www/queque/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-10-08 13:02:42 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in [/var/www/queque/app/Controller/AlumnoController.php, line 22]
+2012-10-08 13:02:42 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')'
+#0 /var/www/queque/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/queque...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/queque...', 22, Array)
+#2 /var/www/queque/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/queque...', 22, Array)
+#3 /var/www/queque/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-08 13:20:15 Error: [MissingActionException] Action AlumnoController::listadep() could not be found.
+#0 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(AlumnoController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-10-08 13:25:34 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`project`.`users`, CONSTRAINT `users_ibfk_1` FOREIGN KEY (`carrera_id`) REFERENCES `carreras` (`id`))
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `pr...', Array)
+#2 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(1009): DboSource->execute('INSERT INTO `pr...')
+#3 /var/www/queque/lib/Cake/Model/Model.php(1730): DboSource->create(Object(User), Array, Array)
+#4 /var/www/queque/app/Controller/UsersController.php(23): Model->save(Array)
+#5 [internal function]: UsersController->add()
+#6 /var/www/queque/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-10-08 13:55:13 Error: Fatal Error (4): syntax error, unexpected '[', expecting ',' or ';' in [/var/www/queque/app/View/Users/add.ctp, line 3]
+2012-10-08 13:55:13 Error: [FatalErrorException] syntax error, unexpected '[', expecting ',' or ';'
+#0 /var/www/queque/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/queque...', 3)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/queque...', 3, Array)
+#2 /var/www/queque/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/queque...', 3, Array)
+#3 /var/www/queque/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-08 13:56:28 Error: Fatal Error (1): Method name must be a string in [/var/www/queque/lib/Cake/View/Helper/FormHelper.php, line 1133]
+2012-10-08 13:56:28 Error: [FatalErrorException] Method name must be a string
+#0 /var/www/queque/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Method name mus...', '/var/www/queque...', 1133)
+#1 [internal function]: ErrorHandler::handleError(1, 'Method name mus...', '/var/www/queque...', 1133, Array)
+#2 /var/www/queque/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Method name mus...', '/var/www/queque...', 1133, Array)
+#3 /var/www/queque/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-08 16:10:54 Error: [MissingActionException] Action AlumnoController::190.45.19.207() could not be found.
+#0 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(AlumnoController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-10-08 16:12:44 Error: [MissingActionException] Action AlumnoController::190.45.19.207() could not be found.
+#0 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(AlumnoController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-10-08 16:24:15 Error: Fatal Error (1): Call to a member function create() on a non-object in [/var/www/queque/app/Controller/UsersController.php, line 18]
+2012-10-08 16:24:15 Error: [FatalErrorException] Call to a member function create() on a non-object
+#0 /var/www/queque/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/queque...', 18)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/queque...', 18, Array)
+#2 /var/www/queque/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/queque...', 18, Array)
+#3 /var/www/queque/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-08 16:29:51 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`project`.`users`, CONSTRAINT `users_ibfk_1` FOREIGN KEY (`carrera_id`) REFERENCES `carreras` (`id`))
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `pr...', Array)
+#2 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(1009): DboSource->execute('INSERT INTO `pr...')
+#3 /var/www/queque/lib/Cake/Model/Model.php(1730): DboSource->create(Object(User), Array, Array)
+#4 /var/www/queque/app/Controller/UsersController.php(19): Model->save(Array)
+#5 [internal function]: UsersController->add()
+#6 /var/www/queque/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-10-08 16:33:13 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`project`.`users`, CONSTRAINT `users_ibfk_1` FOREIGN KEY (`carrera_id`) REFERENCES `carreras` (`id`))
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `pr...', Array)
+#2 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(1009): DboSource->execute('INSERT INTO `pr...')
+#3 /var/www/queque/lib/Cake/Model/Model.php(1730): DboSource->create(Object(User), Array, Array)
+#4 /var/www/queque/app/Controller/UsersController.php(19): Model->save(Array)
+#5 [internal function]: UsersController->add()
+#6 /var/www/queque/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-10-08 16:33:47 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`project`.`users`, CONSTRAINT `users_ibfk_1` FOREIGN KEY (`carrera_id`) REFERENCES `carreras` (`id`))
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `pr...', Array)
+#2 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(1009): DboSource->execute('INSERT INTO `pr...')
+#3 /var/www/queque/lib/Cake/Model/Model.php(1730): DboSource->create(Object(User), Array, Array)
+#4 /var/www/queque/app/Controller/UsersController.php(19): Model->save(Array)
+#5 [internal function]: UsersController->add()
+#6 /var/www/queque/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-10-08 16:42:33 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`project`.`users`, CONSTRAINT `users_ibfk_1` FOREIGN KEY (`carrera_id`) REFERENCES `carreras` (`id`))
+#0 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('INSERT INTO `pr...', Array)
+#2 /var/www/queque/lib/Cake/Model/Datasource/DboSource.php(1009): DboSource->execute('INSERT INTO `pr...')
+#3 /var/www/queque/lib/Cake/Model/Model.php(1730): DboSource->create(Object(User), Array, Array)
+#4 /var/www/queque/app/Controller/UsersController.php(19): Model->save(Array)
+#5 [internal function]: UsersController->add()
+#6 /var/www/queque/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/queque/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/queque/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/queque/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
