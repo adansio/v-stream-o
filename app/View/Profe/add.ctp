@@ -1,5 +1,3 @@
-
-	
 <h1>Add Video</h1>
 
 <?php echo $this->Form->create('Video'); ?>
@@ -20,11 +18,11 @@
 	</head>	
 	<body>
 	<form action="add" method="post" 
-		name="miformu" enctype="multipart/form-data">
-	    <input name="archivo" type="file">
-	<input type='submit' value='Enviar formulario'>
+			name="miformu" enctype="multipart/form-data">
+	    	<input name="data[File]" type="File">
+		<input type='submit' value='subir'>
 
-</form>
+	</form>
 	</body>
 </html>
 
