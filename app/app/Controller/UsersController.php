@@ -14,6 +14,7 @@ class UsersController extends AppController {
     
 
     public function add() {
+	$this->set('carreras', $this->Carrera->find('list'));
         if ($this->request->is('post')) {
             $this->User->create();
             if ($this->User->save($this->request->data)) {
@@ -32,16 +33,16 @@ class UsersController extends AppController {
     public function login() {
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
-                    if($this->Auth->User('tipo') == 0)
-                        $this->redirect($this->Auth->redirect(array('controller' => 'profe', 'action' => 'index2')));
-                        
-                        else{
-                            if($this->Auth->User('tipo') == 1)
-                                $this->redirect($this->Auth->redirect(array('controller' => 'alumno', 'action' => 'index3')));
-                            
-                            else{
-                                if($this->Auth->User('tipo') == 2)
-                                    $this->redirect($this->Auth->redirect(array('controller' => 'admin', 'action' => 'index4')));
+            	if($this->Auth->User('tipo') == 0)
+                	$this->redirect($this->Auth->redirect(array('controller' => 'profe', 'action' => 'index2')));
+                       
+                else{
+                	if($this->Auth->User('tipo') == 1)
+                    	$this->redirect($this->Auth->redirect(array('controller' => 'alumno', 'action' => 'index3')));
+                       
+					else{
+                    	if($this->Auth->User('tipo') == 2)
+                        	$this->redirect($this->Auth->redirect(array('controller' => 'admin', 'action' => 'index4')));
                             }
                         }
             } 

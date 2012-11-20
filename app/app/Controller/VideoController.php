@@ -2,7 +2,7 @@
 class VideoController extends AppController {
 var $helpers = array('Form', 'Html', 'Time');
 	var $name = 'Video';
-
+	var $uses = array('User', 'Video','Alumno');
 	function index() {
 		 
 	}
@@ -23,15 +23,29 @@ var $helpers = array('Form', 'Html', 'Time');
 	}
 	}
 	
-/*	function add() {        
+	function add() {
+				//$this->data['Video']['Video.user_id']= 
+				
+				$this->set('users', $this->User->find('list',array('conditions' => array('User.id' => $this->Auth->User('id')))));
+
 	 			if (!empty($this->data)) {            
-	 			if ($this->Video->save($this->data)) {                
-	 			$this->Session->setFlash('El video fue subido');                
-	 			$this->redirect(array('action' => 'index2'));     
+	 			if ($this->Video->save($this->data)) {    
+            			echo $this->data;
+	 			$this->Session->setFlash('El video fue subido');                	 			
+				$this->redirect(array('controller'=>'profe','action' => 'index2'));     
 	 			       }  
-	 			             }  
-	 			               }
-*/	
+	 			}  
+	}
+
+//	public function repr_video() {
+//		$ruta=$this->data;
+//		echo $ruta;
+		//echo $ruta;
+		//      $this->set('ruta', WWW_ROOT . 'videos/32424883d0');
+//	}
+
+
+	
 }
 
 ?>

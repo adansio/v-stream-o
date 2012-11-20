@@ -1,12 +1,12 @@
 <?php
 class AlumnoController extends AppController {
-var $helpers = array('Form', 'Html', 'Time');
+	var $helpers = array('Form', 'Html', 'Time');
 	var $uses = array('Alumno', 'Video', 'User', 'Historiale', 'Carrera', 'Departamento');
 
 	
 	
 	public function isAuthorized($user){
-			if(in_array($this->action, array('index3','lista', 'view','listacar', 'viewuser'))) {
+			if(in_array($this->action, array('index3', 'lista', 'view','listacar', 'viewuser', 'repr_video'))) {
 				if($user['tipo'] == 1 ){
 					return true;
 				}
@@ -45,7 +45,12 @@ var $helpers = array('Form', 'Html', 'Time');
 		$this->set('user', $this->User->read());
 		
 	}
-	
-}
+
+	function repr_video() {
+//		$this->set($asd);
+//		echo $asd;
+//		$this->set('ruta', WWW_ROOT . 'videos/32424883d0');
+	}
+}		
 
 ?>

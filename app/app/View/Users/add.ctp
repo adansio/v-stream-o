@@ -11,7 +11,7 @@
         echo $this->Form->input('nombre');
         echo $this->Form->input('rut');
         echo $this->Form->input('rol');
-        echo $this->Form->input('carrera_id',array('type' => 'select'));
+        echo $this->Form->input('carrera_id');
         echo $this->Form->input('oficina');
         echo $this->Form->input('about');
         echo $this->Form->input('tipo', array(
