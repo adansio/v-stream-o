@@ -1,0 +1,18 @@
+ABOUT Streaming
+---------------/
+
+Para la habilitacion del servicio de streaming, se utilizó la herramienta FFmpeg de la que se puede obtener la guia de compilación aqui:
+https://ffmpeg.org/trac/ffmpeg/wiki/UbuntuCompilationGuide
+
+Una vez instaladas las herramientas, se utiliza (en el servidor) la aplicacion ffserver de forma tal de cargar el mapa de flujo. El archo de configuraciones es llamado 360p.conf y para habilitar el servicio se ejecuta:
+
+$ ffserver -f /direccion/360p.conf
+
+donde se especifica la ruta de entrada del emisor de streaming (<Feed>), la ruta de transmicion para el streaming (<Stream>), el puerto a utilizar (en este caso 8090) y las configuraciones de codec y caracteristicas de video para cada una de las transmiciones. De momento no se habilita el audio por temas de compatilidad con el equipo de pruebas, pero se puede observar que los comandos que habilitan el audio esta comentado.
+
+Por otro lado, en el cliente, utilizamos la aplicacion ffmpeg que basicamente sirve para la codificacion de video y/o audio, de forma tal que se mantenga la hebra de captura de una camara web constantemente codigicada y volcada en la direccion de entrada que utiliza el servidor gracias al programa ffserver. El metodo usado de momento:
+
+$ ffmpeg -f video4linux2 -i /dev/video0 http://190.45.19.207:8090/video1.ffm
+
+donde video4linux2 es un parametro que permite la identificacion del codec apropiado para el dispositivo de captura, en este caso /dev/video0, y finalmente la aplicacion ffmpeg genera el stream a la direccion http://190.45.19.207:8090/video1.ffm que es donde el servidor espera la semilla o alimento para la transmicion a traves de la pagina web.
+

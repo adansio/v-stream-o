@@ -1,12 +1,12 @@
 <?php
 class AlumnoController extends AppController {
-var $helpers = array('Form', 'Html', 'Time');
-	var $uses = array('Alumno', 'Video', 'User', 'Historiale', 'Carrera', 'Departamento');
+	var $helpers = array('Form', 'Html', 'Time');
+	var $uses = array('Alumno', 'Profe', 'Video', 'User', 'Historiale', 'Carrera', 'Departamento');
 
 	
 	
 	public function isAuthorized($user){
-			if(in_array($this->action, array('index3','lista', 'view','listacar', 'viewuser'))) {
+			if(in_array($this->action, array('index', 'lista', 'view','listacar', 'viewuser', 'repr_video', 'viewprofe'))) {
 				if($user['tipo'] == 1 ){
 					return true;
 				}
@@ -15,7 +15,7 @@ var $helpers = array('Form', 'Html', 'Time');
 			return false;
 		}
 	
-	function index3() {
+	function index() {
 		$this->set('profes', $this->User->find('all',array('conditions' => array('User.tipo' => 0))));
 		$this->set('historiales', $this->Historiale->find('all',
 		array('conditions' => array('user_username' => $this->Auth->User('username')))));
@@ -45,7 +45,19 @@ var $helpers = array('Form', 'Html', 'Time');
 		$this->set('user', $this->User->read());
 		
 	}
-	
-}
+
+	function repr_video() {
+//		$this->set($asd);
+//		echo $asd;
+//		$this->set('ruta', WWW_ROOT . 'videos/32424883d0');
+	}
+
+	function viewprofe($id = null)
+    {
+         $this->User->id = $id;
+         $this->set('user', $this->User->read());
+		    }
+
+}		
 
 ?>

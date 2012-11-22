@@ -3,7 +3,7 @@
 <p><?php echo $this->Html->link('logout', array('controller' => 'users','action' => 'logout')); ?></p>
 
 <tr>
-<th>Lista de Usuario</th>
+<th>Lista de Usuarios</th>
 </tr>
  <table>
 
@@ -16,10 +16,7 @@
 </tr>
 </table>
 
-
-
-
-<h1>Lista Videos</h1>
+<h1>Lista de Videos</h1>
 <table>
     <tr>
         <th>Id</th>

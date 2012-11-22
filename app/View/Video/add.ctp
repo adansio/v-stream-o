@@ -5,7 +5,8 @@
         <legend><?php echo __('Add Video'); ?></legend>
     <?php
         echo $this->Form->input('nombre');
- 	       
+	
+ 	echo $this->Form->input('user_id');
         
     ?>
     </fieldset>
@@ -27,5 +28,5 @@
 </html>
 
 <A HREF="http://www.htmlpoint.com">Visita HTMLpoint</A>
-<p><?php echo $this->Html->link('volver', array('controller' => 'profe','action' => 'index2')); ?></p>
+<p><?php echo $this->Html->link('volver', array('controller' => 'profe','action' => 'index')); ?></p>
 

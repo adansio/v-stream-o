@@ -16,4 +16,4 @@
         </tr>
         </table>
         
-        <p><?php echo $this->Html->link('volver', array('controller' => 'alumno','action' => 'index3')); ?></p>
+        <p><?php echo $this->Html->link('volver', array('controller' => 'alumno','action' => 'index')); ?></p>

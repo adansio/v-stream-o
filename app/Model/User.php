@@ -7,7 +7,12 @@ class User extends AppModel {
                          //'conditions'    => array('Comentario.estado' => '1'),        
                         'order'    => 'Video.id DESC',            
                         //'limit'        => '5',           
-                         'dependent'=> true        ) 
+                         'dependent'=> true        ),
+						'Post' => Array('ClassName' => 'Post',
+						'foreignKey' => 'user_id'
+						)
+
+
                     /*,'Historial' => array('className' => 'Historial', 
                        'foreignKey'    => 'user_id',
                          //'conditions'    => array('Comentario.estado' => '1'),        
