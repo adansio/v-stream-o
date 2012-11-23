@@ -3,15 +3,17 @@ class VideoController extends AppController {
 	var $helpers = array('Form', 'Html', 'Time','Session');
 	var $name = 'Video';
 	var $components = array ('Auth','Session');
-	var $uses = array('User', 'Video','Alumno');
+	var $uses = array('User', 'Video','Alumno','Profe');
 	
 	function index() {
 		$this->set('videos', $this->Video->find('all'));
 	}
 	
-	function view($id = null) {
+	function view_video($id = null) {
 		$this->Video->id = $id;
 		$this->set('video', $this->Video->read());
+		
+	
 	}
 	
 	function delete($id) {
