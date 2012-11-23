@@ -1,6 +1,6 @@
 <!-- File: /app/View/Posts/index.ctp -->
 
-<h1>Posts</h1>
+<h2>Streaming</h2>
 <?php 
 ###########
 ##Si usuario es profesor o Administrador muestra lo siguiente

@@ -1,8 +1,10 @@
-<h1><?php echo $user['User']['nombre']?></h1>
-<h1><?php echo $user['User']['username']?></h1>
-<h1><?php echo $user['User']['rut']?></h1>
-<h1><?php echo $user['User']['tipo']?></h1>
-<h1><?php echo $user['Carrera']['nombre']?></h1>
+<h2>Perfil </h2>
+
+
+<h1><?php echo 'Nombre: '.$user['User']['nombre']?></h1>
+<h1><?php echo 'Username: '.$user['User']['username']?></h1>
+<h1><?php echo 'Rol: '.$user['User']['rol']?></h1>
+<h1><?php echo 'Carrera: '.$user['Carrera']['nombre']?></h1>
 
 
 

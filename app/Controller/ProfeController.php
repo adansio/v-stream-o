@@ -85,6 +85,10 @@ class ProfeController extends AppController {
 		$this->set('video', $this->Video->read());
 	}
 	
+	
+	
+	
+	
 	function viewuser() {
 		$this->User->id = $this->Auth->User('id');
 		$this->set('user', $this->User->read());	

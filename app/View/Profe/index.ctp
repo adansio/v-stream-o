@@ -1,5 +1,4 @@
-<h1>Portada</h1>
-<p><?php echo $this->Html->link('Add Videos', array('controller'=>'video','action' => 'add')); ?></p>
+<h2><?php echo 'Bienvenido Profesor '.$this->Session->read('Auth.User.nombre') ?></h2>
 
 <p><?php echo $this->Html->link('Perfil', array('controller' => 'profe','action' => 'viewuser')); ?></p>
        

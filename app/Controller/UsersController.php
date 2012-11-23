@@ -30,6 +30,23 @@ class UsersController extends AppController {
             }
         }
     }
+    
+    /*function edit($id = null) {
+            $this->User->id = $id;
+           
+            if ($this->request->is('get')) {
+                $this->request->data = $this->User->read();
+            } 
+            else 
+            {
+                if ($this->User->save($this->request->data)) 
+                {
+                    $this->Session->setFlash('Tu informacion ha sido cambiada');
+                    $this->redirect(array('action' => 'viewuser'));
+                }
+            }
+        }
+*/    
    
 // app/Controller/UsersController.php
 

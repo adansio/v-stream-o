@@ -2,6 +2,7 @@
 
 <?php 
 if ($this->Session->read('Auth.User.tipo') == 0 || $this->Session->read('Auth.User.tipo') == 2) { ?>
+<p><?php echo $this->Html->link('Add Videos', array('controller'=>'video','action' => 'add')); ?></p>
 
 <table>
     <tr>
@@ -11,7 +12,7 @@ if ($this->Session->read('Auth.User.tipo') == 0 || $this->Session->read('Auth.Us
 <?php foreach ($videos as $video): ?>
     <tr>
         <td><?php echo $video['Video']['id']; ?></td>
-        <td><?php echo $this->Html->link($video['Video']['nombre'], array('action' => 'view', $video['Video']['id']));?></td>
+        <td><?php echo $this->Html->link($video['Video']['nombre'], array('action' => 'view_video', $video['Video']['id']));?></td>
         <td><?php echo  $this->Html->link('Delete', array('action' => 'delete', $video['Video']['id']), null, 'Estas seguro?' )?></td>
         <?php endforeach; ?>
         </tr>

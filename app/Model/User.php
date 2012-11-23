@@ -33,7 +33,7 @@ class User extends AppModel {
                                                 'message' => 'Introduzca su nombre de usuario.'),
                                                 'isUnique'=>array('rule'=>'isUnique',
                                                 'required' => true, 
-                                                'message' => 'El nombre ya ha sido ocupado')
+                                                'message' => 'El nombre ya ha sido ocupado'),
                                                 
                                                 ),
 					 

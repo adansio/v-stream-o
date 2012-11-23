@@ -1,3 +1,6 @@
+
+<h2>Lista de Streaming</h2>
+
 <table>
     <tr>
         <th>Nombre</th>
