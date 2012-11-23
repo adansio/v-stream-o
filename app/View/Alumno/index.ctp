@@ -9,13 +9,14 @@
 </tr>
 
 <?php foreach ($profes as $profe): ?>
-           
+	<tr>           
     <td><?php echo $this->Html->link($profe['User']['nombre'], array('controller' => 'alumno', 'action' => 'viewprofe', $profe['User']['id']));?></td>
-        
+</tr>
 <?php endforeach; ?>
+
 </table>
 
-
+<br>
 
 <table>
 <tr>

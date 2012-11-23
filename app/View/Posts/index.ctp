@@ -16,7 +16,10 @@ if ($this->Session->read('Auth.User.tipo') == 0 || $this->Session->read('Auth.Us
 
 <!-- Here is where we loop through our $posts array, printing out post info -->
 
-		<?php foreach ($posts as $post): ?>
+<?php foreach ($posts as $post): ?>
+
+	<? if($this->Session->read('Auth.User.id') == $post['Post']['user_id']) 
+		{ ?>
 		<tr>
 			<td><?php echo $post['Post']['id']; ?></td>
 			<td><?php echo $this->Html->link($post['Post']['title'],
@@ -32,6 +35,7 @@ if ($this->Session->read('Auth.User.tipo') == 0 || $this->Session->read('Auth.Us
 	        </td>
 		    <td><?php echo $post['Post']['created']; ?></td>
 		</tr>	
+		<? } ?>
 		<?php endforeach; ?>
 	
 	</table>
