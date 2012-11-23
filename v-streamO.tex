@@ -24,19 +24,21 @@ explicación mas a fondo de algun tema y compartirla con sus alumnos pero bajo c
 y de reservación de derechos.\\
 
 Es por esto que se plantea un sistema en el cual mediante videos (grabaciones o streming media) el profesor
-podrá compartir ``clases'' a sus alumnos, tal como existen ejemplos de profesores de Massachusetts Institute of Technology (MIT) que publican sus clases en sitios como www.youtube.com ayudando a comprensión de temas
+podrá compartir ``clases'' a sus alumnos, tal como existen ejemplos de profesores de Massachusetts Institute 
+of Technology (MIT) que publican sus clases en sitios como www.youtube.com ayudando a comprensión de temas
 no solo a usuarios del MIT si no que a nivel mundial.
 
 \subsection{Resumen}
 El proyecto consta de un sistema de acceso web, en el cual un profesor (registrado en el sistema) pueda 
 publicar videos de ciertas asignaturas o algún contenido en específico a modo de apoyo para la comprensión
 de un tema en particular, y además realizar video conferencias programadas para sus alumnos. Junto con esto
-el alumnado (matriculado en un curso con un respectivo profesor) podrá acceder a estos contenidos mediante
-el sistema, este será de un ambiente similar a lo que es el sitio www.aula.usm.cl, agregando esta nueva
-funcionalidad de video, agregando a esto cualquier nueva duda proveniente del video, se dispondrá del mail 
-del profesor para realizarle consultas, y en el caso de que el recurso sea streaming, se contará con un campo
-especial de mensajeria para relizarle consultas directamente durante la clase en vivo a traves del sistema
-interno V-stream'O.
+el alumno podrá acceder a estos contenidos mediante un registro previo en el sistema,
+este será de un ambiente similar a lo que es el sitio www.aula.usm.cl, agregando esta nueva
+funcionalidad de video, junto con esto cualquier nueva duda proveniente del video, se dispondrá del mail 
+del profesor para realizarle consultas, %y en el caso de que el recurso sea streaming, se contará con un campo
+%especial de mensajeria para relizarle consultas directamente durante la clase en vivo a traves del sistema
+%interno V-stream'O.
+
 
 \newpage
 \section{Descripción General}
@@ -54,8 +56,8 @@ complementarias de la UTFSM.
 restricciones pertinentes.
 \item Establecer sistema de video conferencias en la cual el profesor pueda mediante una webcam local
 realizar una ``clase on-line''.
-\item Los alumnos puedan observar las ``clases on-line'' y realizar consultas al profesor a través de un 
-sistema de chat interno.
+\item Los alumnos puedan observar las ``clases on-line''.% y realizar consultas al profesor a través de un 
+%sistema de chat interno.
 \end{enumerate}
 
 \subsubsection{Problemática que enfrenta}
@@ -112,15 +114,23 @@ en particular.
 
 - Permitir al usuario no registrado acceder a cierto contenido público.\\
 
-- Permitir al usuario registrado matricularse en un curso.\\
+%- Permitir al usuario registrado matricularse en un curso.\\
 
-- Permitir al usuario registrado buscar videos en los cuales tenga acceso.\\
+- Permitir al usuario registrado buscar videos dentro de los disponibles por profesor.\\
 
 - Permitir al usuario registrado ver videos.\\
 
 - Permitir al usuario registrado mantener un historial con los útimos videos observados.\\ 
 
-- Permitir al usuario registrado, modificar su portada de contenidos.\\
+- Permitir al usuario Profesor modificar su portada de contenidos.\\
+
+- Permitir al usuario Profesor publicar contenido de tipo ``POST''.\\
+
+- Permitir al usuario Profesor modificar o editar los contenidos de tipo ``POST''.\\
+
+- Permitir al usuario Alumno ver los contenidos de las publicaciones de tipo ``POST'' de algún profsor en 
+particular.\\
+
 \newpage
 \subsubsection{No Funcionales}
 
@@ -159,7 +169,7 @@ mediante este sistema.\\
 
 \paragraph{En el lado del servidor\\\\}
 
--	Mantención de cuentas del cliente en general, ya sea para alumno, profesor o administrador.\\
+-	Mantención de cuentas del cliente en general, ya sea para alumno, profesor por parte de un administrador.\\
 
 -	Gestión y creación de las cuentas para profesor y alumno.\\
 
@@ -180,16 +190,22 @@ conectados al streaming, como a los que no lo estan.\\
 -	Al momento de ingresar al sistema autenticándose, corroborar que el usuario está ya registrado en
 el sistema para poder acceder a los contenidos respectivos.\\
 
+- 	La creación de una cuenta de forma única en cuanto a un identificador de usuario, junto con el username,
+	(a modo de correo electrónico), prevenir la creación de una cuenta con los mismos usuarios de correo.\\
+
 -	En caso que el usuario no se encuentre en lo base de datos, podrá ingresar a ellos mediante un 
-registro, el cual llenará y será un administrador quien validará los datos entregados.\\
+registro, para el caso de los alumnos, será responsabilidad de ellos la correcta creación de su cuenta,
+en caso de algún desperfecto, este usuario deberá contactar al administrador del sistema para realizar 
+modificaciones, para el caso de un profesor, este se econtrará a cargo de un administrador quien irá validando 
+los datos entregados.\\
 
 -	Una vez que el cliente esta autenticado, dependiendo del tipo de usuario (alumno, profesor o 
 administrador), podrá realizar diferentes actividades.\\
 
--	Para el caso del cliente-profesor, podrá ver y publicar videos, programar futuras clases on-line, 
-y eventualmente realizarlas mediante el streaming.\\
+-	Para el caso del cliente-profesor, podrá ver y publicar videos, publicar posts, realizar la programación 
+de las futuras clases on-line y eventualmente llevarlas a cabo mediante el streaming.\\
 
--	Para el caso del cliente-alumno, podrá ver videos publicados en ramos en los cuales esté previamente
+-	Para el caso del cliente-alumno, podrá ver videos publicados por ramo o por profesor
 inscrito, podrá ver clases on-line y tambien realizar consultas al profesor respectivo durante el 
 streaming.
 
