@@ -17,7 +17,7 @@
 			$this->Post->create();
 				if ($this->request->is('post')) {
 				if ($this->Post->save($this->request->data)) {
-					$this->Session->setFlash('Tu post fueron guardado');
+					$this->Session->setFlash('Tu post fue guardado');
 					$this->redirect(array('action' => 'index'));
 			}
 			}
@@ -48,5 +48,10 @@
 				$this->Session->setFlash('Post con id: ' . $id . ' ha sido borrado.');
 				$this->redirect(array('action' => 'index'));
 		    }
+		}
+		
+		function lista_posts ($id = null){
+			$this->User->id = $id;
+			$this->set('posts', $this->Post->find('all', array('conditions' => array('Post.user_id' => $id))));
 		}
 }

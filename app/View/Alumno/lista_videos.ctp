@@ -4,9 +4,6 @@
         <th>Nombre</th>
     </tr>
 
-<!-- Aquí esta el ciclo que muestra $posts a través de nuestro arreglo, imprimiendo la información de los posts -->
-    
-    
     <?php foreach ($videos as $video): ?>
     <tr>
         <td><?php echo $video['Video']['id']; ?></td>
