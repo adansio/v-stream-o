@@ -7,7 +7,11 @@ class UsersController extends AppController {
         parent::beforeFilter();
         $this->set('carreras', $this->Carrera->find('all'));
 		$this->Auth->allow('add'); // Letting users register 
+        
+
     }    
+    
+    
 
     public function add() {
 	$this->set('carreras', $this->Carrera->find('list'));
@@ -15,7 +19,12 @@ class UsersController extends AppController {
             $this->User->create();
             if ($this->User->save($this->request->data)) {
                 $this->Session->setFlash(__('El usuario ha sido creado'));
+                if ($this->Session->read('Auth.User.tipo') == 2){
+                $this->redirect(array('controller' => 'admin','action' => 'index'));    
+                }else
                 $this->redirect(array('action' => 'login'));
+                    
+            
             } else {
                 $this->Session->setFlash(__('No se pudo crear, intente denuevo'));
             }
@@ -38,7 +47,7 @@ class UsersController extends AppController {
                        
 					else{
                     	if($this->Auth->User('tipo') == 2)
-                        	$this->redirect($this->Auth->redirect(array('controller' => 'admin', 'action' => 'index4')));
+                        	$this->redirect($this->Auth->redirect(array('controller' => 'admin', 'action' => 'index')));
                             }
                         }
             } 

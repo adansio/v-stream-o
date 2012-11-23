@@ -23,8 +23,6 @@
 <th>Lista de Carreras</th>
 </tr>
 
-<A HREF="http://190.45.19.207/streaming/ch0.html">Streaming</A>
-
 <?php foreach ($carreras as $carrera): ?>
     
         

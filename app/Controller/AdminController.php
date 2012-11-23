@@ -6,7 +6,7 @@ var $helpers = array('Form', 'Html', 'Time');
 	
 	
 	public function isAuthorized($user){
-			if(in_array($this->action, array('index4','view','viewuser', 'deleteuser', 'deletevideo' ))){
+			if(in_array($this->action, array('index','view','viewuser', 'deleteuser', 'deletevideo' ))){
 				if($user['tipo'] == 2 ){
 					return true;
 				}
@@ -15,7 +15,7 @@ var $helpers = array('Form', 'Html', 'Time');
 			return false;
 		}
 	
-	function index4() {
+	function index() {
 		$this->set('users', $this->User->find('all'));
 		$this->set('videos', $this->Video->find('all'));
 		
@@ -24,14 +24,14 @@ var $helpers = array('Form', 'Html', 'Time');
 	function deletevideo($id) {
 		if ($this->Video->delete($id)){
 			$this->Session->setFlash('El video with id: '.$id.' fue borrado.');
-			$this->redirect(array('action'=>'index4'));
+			$this->redirect(array('action'=>'index'));
 		}
 	}
 	
 	function deleteuser($id) {
 		if ($this->User->delete($id)){
 			$this->Session->setFlash('El usuario with id: '.$id.' fue borrado.');
-			$this->redirect(array('action'=>'index4'));
+			$this->redirect(array('action'=>'index'));
 		}
 	}
 	
@@ -44,6 +44,7 @@ var $helpers = array('Form', 'Html', 'Time');
 		$this->User->id = $id;
 		$this->set('user', $this->User->read());
 	}
+	
 	
 	
 }

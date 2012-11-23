@@ -11,7 +11,7 @@ if ($this->Session->read('Auth.User.tipo') == 0 || $this->Session->read('Auth.Us
 
 	<table>
 		<tr>
-			<th>Id</th>
+			<!--th>Id</th-->
 			<th>Title</th>
 			<th>Action</th>
 			<th>Created</th>
@@ -22,7 +22,7 @@ if ($this->Session->read('Auth.User.tipo') == 0 || $this->Session->read('Auth.Us
 	<? if($this->Session->read('Auth.User.id') == $post['Post']['user_id']) 
 		{ ?>
 		<tr>
-			<td><?php echo $post['Post']['id']; ?></td>
+			<!--td><?php #echo $post['Post']['id']; ?></td-->
 			<td><?php echo $this->Html->link($post['Post']['title'],
 					array('controller' => 'posts', 'action' => 'view', 
 					$post['Post']['id'])); ?>

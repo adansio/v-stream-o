@@ -28,8 +28,20 @@ class User extends AppModel {
     
     
     public $displayField = 'username';	
-	var $validate = array( 'username' => array('rule' => 'notEmpty'),
-					 'password' => array('rule' => 'notEmpty'));
+	var $validate = array( 'username' => array('email' => array('rule' => 'email',
+                                                'required' => true, 
+                                                'message' => 'Introduzca su nombre de usuario.'),
+                                                'isUnique'=>array('rule'=>'isUnique',
+                                                'required' => true, 
+                                                'message' => 'El nombre ya ha sido ocupado')
+                                                
+                                                ),
+					 
+                                     'password' => array('rule' => array('minLength', '6' ),
+                                     'required' => true,
+                                      'message' => 'Debe contener minimo 6 caracteres')
+                                      );
+                     
 	
 	public function beforeSave($options = array()) {
     if (isset($this->data[$this->alias]['password'])) {

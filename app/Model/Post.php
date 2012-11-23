@@ -12,7 +12,8 @@ class Post extends AppModel {
 							)
 	);
 	
-	var $belongsTo = array('User' => array(  'className'    => 'User', 'foreignKey'   => 'user_id' ));
+	var $belongsTo = array('User' => array(  'className'    => 'User', 'foreignKey'   => 'user_id',
+							'order' => 'Post.id DESC'));
 }
 
 ?>
