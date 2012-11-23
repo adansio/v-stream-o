@@ -14,4 +14,4 @@
 <p></p>
 <p><?php echo $this->Html->link('logout', array('controller' => 'users','action' => 'logout')); ?></p>
 
-<p><?php echo $this->Html->link('volver', array('controller' => 'alumno','action' => 'index3')); ?></p>
+<p><?php echo $this->Html->link('volver', array('controller' => 'alumno', 'action' => 'lista_videos', $video['User']['id'])); ?></p>

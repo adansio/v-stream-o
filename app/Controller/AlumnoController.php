@@ -3,10 +3,9 @@ class AlumnoController extends AppController {
 	var $helpers = array('Form', 'Html', 'Time');
 	var $uses = array('Alumno', 'Profe', 'Video', 'User', 'Historiale', 'Carrera', 'Departamento');
 
-	
-	
+
 	public function isAuthorized($user){
-			if(in_array($this->action, array('index', 'lista', 'view','listacar', 'viewuser', 'repr_video', 'viewprofe'))) {
+			if(in_array($this->action, array('index', 'lista_videos', 'view','listacar', 'viewuser', 'repr_video', 'viewprofe'))) {
 				if($user['tipo'] == 1 ){
 					return true;
 				}
@@ -23,7 +22,8 @@ class AlumnoController extends AppController {
 		$this->set('departamentos', $this->Departamento->find('all'));
 		}
 	
-	function lista($id = null){
+	function lista_videos($id = null){
+		$this->User->id = $id;
 		$this->set('videos', $this->Video->find('all', array('conditions' => array('Video.user_id' => $id))));
 		
 	}
@@ -31,9 +31,6 @@ class AlumnoController extends AppController {
 		$this->set('videos', $this->Video->find('all', array('conditions' => array('User.carrera_id' => $id))));
 		
 	}
-	
-	
-	
 	
 	function view($id = null) {
 		$this->Video->id = $id;
@@ -56,7 +53,7 @@ class AlumnoController extends AppController {
     {
          $this->User->id = $id;
          $this->set('user', $this->User->read());
-		    }
+	}
 
 }		
 

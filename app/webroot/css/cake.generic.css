@@ -733,6 +733,12 @@ pre {
 	color: #0a0;
 }
 
+.video{
+	display:block;
+	width:400px;
+	height:300px;
+}
+
 /** Elements **/
 #url-rewriting-warning {
 	display:none;

@@ -17,7 +17,7 @@ class VideoController extends AppController {
 	function delete($id) {
 	if ($this->Video->delete($id)){
 		$this->Session->setFlash('El video with id: '.$id.' fue borrado.');
-		$this->redirect(array('action'=>'index2'));
+		$this->redirect(array('action'=>'index'));
 	}
 	}
 	
@@ -30,7 +30,7 @@ class VideoController extends AppController {
 	 			if ($this->Video->save($this->data)) {    
             			echo $this->data;
 	 			$this->Session->setFlash('El video fue subido');                	 			
-				$this->redirect(array('controller'=>'profe','action' => 'index2'));     
+				$this->redirect(array('controller'=>'profe','action' => 'index'));     
 	 			       }  
 	 			}  
 	}

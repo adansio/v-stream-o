@@ -2,7 +2,7 @@
 	    public $helpers = array('Html','Form','Session'); 
 
 		var $components = array ('Auth','Session'); 
-		var $uses = array('Post','User');
+		var $uses = array('Post','User', 'Alumno');
 		function index() {
 			$this->set('posts', $this->Post->find('all'));
 		}

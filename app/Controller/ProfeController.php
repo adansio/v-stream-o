@@ -51,7 +51,7 @@ class ProfeController extends AppController {
 				
 				if ($this->Video->save($this->data)) {                
  					$this->Session->setFlash('El video fue subido');                
-		 			$this->redirect(array('action' => 'index2'));     
+		 			$this->redirect(array('action' => 'index'));     
 			
 				echo "Archivo subido con exito";
 			}
@@ -76,7 +76,7 @@ class ProfeController extends AppController {
 	function delete($id) {
 		if ($this->Video->delete($id)){
 			$this->Session->setFlash('El video with id: '.$id.' fue borrado.');
-			$this->redirect(array('action'=>'index2'));
+			$this->redirect(array('action'=>'index'));
 		}
 	}
 	

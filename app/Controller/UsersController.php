@@ -7,11 +7,7 @@ class UsersController extends AppController {
         parent::beforeFilter();
         $this->set('carreras', $this->Carrera->find('all'));
 		$this->Auth->allow('add'); // Letting users register 
-        
-
     }    
-    
-    
 
     public function add() {
 	$this->set('carreras', $this->Carrera->find('list'));
