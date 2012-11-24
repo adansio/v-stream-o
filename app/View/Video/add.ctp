@@ -1,17 +1,5 @@
 <h1>Add Video</h1>
 
-<?php echo $this->Form->create('Video'); ?>
-    <fieldset>
-        <legend><?php echo __('Add Video'); ?></legend>
-    <?php
-        echo $this->Form->input('nombre');
-	
- 	echo $this->Form->input('user_id');
-        
-    ?>
-    </fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-
 
 <html>
     <head>
@@ -20,8 +8,14 @@
 	<body>
 	<form action="add" method="post" 
 			name="miformu" enctype="multipart/form-data">
+			<input name="nombre" type="text">
+			<input name="user_id" type="number" 
+					value=<?php echo $this->Session->read('Auth.User.id') ?> >
+			<input name="duracion" type="text">
+			<input name="descripcion" type="text">
 	    	<input name="data[File]" type="File">
-		<input type='submit' value='subir'>
+			
+	<input type='submit' value='subir'>
 
 	</form>
 	</body>

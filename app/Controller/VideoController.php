@@ -24,18 +24,51 @@ class VideoController extends AppController {
 	}
 	
 	function add() {
-				//$this->data['Video']['Video.user_id']= 
-				
-				$this->set('users', $this->User->find('list',array('conditions' => array('User.id' => $this->Auth->User('id')))));
+	
+		if (!empty($this->data))
+		{
+			$currentFile = $this->params['data']['File'];
+			$filePath = WWW_ROOT . 'videos/' . $currentFile['name']; 
+			 if (is_uploaded_file($currentFile['tmp_name']) && 
+				 move_uploaded_file($currentFile['tmp_name'], $filePath) &&
+				 $this->Video->save($this->data) && 
+				 $this->Video->saveField('link', 'videos/' . $currentFile['name'])) 
+			{ 	
 
-	 			if (!empty($this->data)) {            
-	 			if ($this->Video->save($this->data)) {    
-            			echo $this->data;
-	 			$this->Session->setFlash('El video fue subido');                	 			
-				$this->redirect(array('controller'=>'profe','action' => 'index'));     
-	 			       }  
-	 			}  
+				echo "No Error";  
+				echo $currentFile['name'];
+			} 
+		}
+
 	}
+
+				//$this->data['Video']['Video.user_id']= 
+
+				#$this->set('users', $this->User->find('list',array('conditions' => array('User.id' => $this->Auth->User('id')))));
+/*		if (!empty($this->data)) { 
+			if (move_uploaded_file($_FILES['nombre']['tmp_name'], 
+				WWW_ROOT . 'videos/' .  $_FILES['nombre']['name'])) 
+			{
+	 			if ($this->Video->save($this->data)) 
+				{    
+           			echo $this->data;
+		 			$this->Session->setFlash('El video fue subido');                	 			
+					$this->redirect(array('controller'=>'profe','action' => 'index'));     
+	 			}
+				else 
+				{
+					echo "no se ha guardado";
+				}
+	 		}
+			else
+			{
+				echo "no se ha movido";
+			}
+	}
+	else 
+	{
+		echo "wea vacia";
+	}*/
 
 //	public function repr_video() {
 //		$ruta=$this->data;
@@ -43,9 +76,7 @@ class VideoController extends AppController {
 		//echo $ruta;
 		//      $this->set('ruta', WWW_ROOT . 'videos/32424883d0');
 //	}
-
-
-	
+//	}
 }
 
 ?>
