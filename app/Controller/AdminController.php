@@ -6,7 +6,7 @@ var $helpers = array('Form', 'Html', 'Time');
 	
 	
 	public function isAuthorized($user){
-			if(in_array($this->action, array('index','view','viewuser', 'deleteuser', 'deletevideo' ))){
+			if(in_array($this->action, array('index','view','viewuser', 'deleteuser', 'deletevideo', 'lista_profe', 'lista_videos' ))){
 				if($user['tipo'] == 2 ){
 					return true;
 				}
@@ -16,8 +16,8 @@ var $helpers = array('Form', 'Html', 'Time');
 		}
 	
 	function index() {
-		$this->set('users', $this->User->find('all'));
-		$this->set('videos', $this->Video->find('all'));
+		
+		
 		
 	}
 	
@@ -35,11 +35,19 @@ var $helpers = array('Form', 'Html', 'Time');
 		}
 	}
 	
-	
-	function view($id = null) {
-		$this->Video->id = $id;
-		$this->set('video', $this->Video->read());
+	function lista_profe(){
+		
+		$this->set('users', $this->User->find('all'));
+		
+		
 	}
+	
+	function lista_videos(){
+		
+		$this->set('videos', $this->Video->find('all'));
+		
+	}
+	
 	function viewuser($id = null) {
 		$this->User->id = $id;
 		$this->set('user', $this->User->read());
