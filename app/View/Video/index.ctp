@@ -8,13 +8,15 @@ if ($this->Session->read('Auth.User.tipo') == 0 || $this->Session->read('Auth.Us
     <tr>
         <th>Id</th>
         <th>Nombre</th>
-    </tr>
-<?php foreach ($videos as $video): ?>
+    </tr><?php foreach ($videos as $video): ?>
     <tr>
+
+	<?php if($this->Session->read('Auth.User.id') == $video['Video']['user_id'])
+	{ ?>
         <td><?php echo $video['Video']['id']; ?></td>
         <td><?php echo $this->Html->link($video['Video']['nombre'], array('action' => 'view_video', $video['Video']['id']));?></td>
         <td><?php echo  $this->Html->link('Delete', array('action' => 'delete', $video['Video']['id']), null, 'Estas seguro?' )?></td>
-        <?php endforeach; ?>
+        <?php } endforeach; ?>
         </tr>
         </table>
 

@@ -11,16 +11,14 @@ class VideoController extends AppController {
 	
 	function view_video($id = null) {
 		$this->Video->id = $id;
-		$this->set('video', $this->Video->read());
-		
-	
+		$this->set('video', $this->Video->read());	
 	}
 	
 	function delete($id) {
-	if ($this->Video->delete($id)){
-		$this->Session->setFlash('El video with id: '.$id.' fue borrado.');
-		$this->redirect(array('action'=>'index'));
-	}
+		if ($this->Video->delete($id)){
+			$this->Session->setFlash('El video fue borrado.');
+			$this->redirect(array('action'=>'index'));
+		}
 	}
 	
 	function add() {
@@ -34,49 +32,11 @@ class VideoController extends AppController {
 				 $this->Video->save($this->data) && 
 				 $this->Video->saveField('link', 'videos/' . $currentFile['name'])) 
 			{ 	
-
-				echo "No Error";  
-				echo $currentFile['name'];
+				$this->Session->setFlash('El video fue subido correctamente');
 			} 
 		}
 
 	}
-
-				//$this->data['Video']['Video.user_id']= 
-
-				#$this->set('users', $this->User->find('list',array('conditions' => array('User.id' => $this->Auth->User('id')))));
-/*		if (!empty($this->data)) { 
-			if (move_uploaded_file($_FILES['nombre']['tmp_name'], 
-				WWW_ROOT . 'videos/' .  $_FILES['nombre']['name'])) 
-			{
-	 			if ($this->Video->save($this->data)) 
-				{    
-           			echo $this->data;
-		 			$this->Session->setFlash('El video fue subido');                	 			
-					$this->redirect(array('controller'=>'profe','action' => 'index'));     
-	 			}
-				else 
-				{
-					echo "no se ha guardado";
-				}
-	 		}
-			else
-			{
-				echo "no se ha movido";
-			}
-	}
-	else 
-	{
-		echo "wea vacia";
-	}*/
-
-//	public function repr_video() {
-//		$ruta=$this->data;
-//		echo $ruta;
-		//echo $ruta;
-		//      $this->set('ruta', WWW_ROOT . 'videos/32424883d0');
-//	}
-//	}
 }
 
 ?>

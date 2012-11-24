@@ -17,4 +17,15 @@
         </tr>
         </table>
         
-        <p><?php echo $this->Html->link('volver', array('controller' => 'alumno','action' => 'viewprofe', $post['Post']['user_id'])); ?></p>
+	<?php if ($this->Session->read('Auth.User.tipo') == 2){
+			echo $this->Html->link('volver', array('controller' => 'admin','action' => 'index')); 
+		 }
+		if ($this->Session->read('Auth.User.tipo') == 1){
+			echo $this->Html->link('volver', array('controller' => 'alumno',
+							'action' => 'viewprofe', $post['Post']['user_id'] )); 
+		 }
+		if ($this->Session->read('Auth.User.tipo') == 0){
+			echo $this->Html->link('volver', array('controller' => 'Profe','action' => 'index', 
+			$post['Post']['user_id'])); 
+		}
+

@@ -2,7 +2,7 @@
 
 <h1><?php echo 'Nombre: '.$video['Video']['nombre']?></h1>
 
-<h1><?php echo 'Descripción'.$video['Video']['descripcion']?></h1>
+<h1><?php echo 'Descripción: '.$video['Video']['descripcion']?></h1>
 <?php $ruta = $video['Video']['link']; ?>
 <h1><?php //echo $ruta ?></h1>
 <video poster="logo.png" controls autoplay style=" width:640; height:480; border: 1px solid black;"> 
@@ -13,7 +13,7 @@
 
 <p><?php 
 if ($this->Session->read('Auth.User.tipo') == 2){
-echo $this->Html->link('volver', array('controller' => 'admin','action' => 'index')); 
+echo $this->Html->link('volver', array('controller' => 'admin','action' => 'lista_videos')); 
 }
 
 if ($this->Session->read('Auth.User.tipo') == 1){
@@ -21,7 +21,7 @@ echo $this->Html->link('volver', array('controller' => 'alumno','action' => 'lis
 }
 
 if ($this->Session->read('Auth.User.tipo') == 0){
-echo $this->Html->link('volver', array('controller' => 'profe','action' => 'index')); 
+echo $this->Html->link('volver', array('controller' => 'video','action' => 'index', $video['Video']['user_id'])); 
 }
 
 

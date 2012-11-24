@@ -3,6 +3,7 @@
 <table>
     <tr>
 <th>Lista de Videos</th>
+<th>Nombre Video</th>
 </tr>
     <?php foreach ($videos as $video): ?>
     <tr>

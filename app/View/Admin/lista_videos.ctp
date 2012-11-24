@@ -9,7 +9,8 @@
 <?php foreach ($videos as $video): ?>
     <tr>
         <td><?php echo $video['Video']['id']; ?></td>
-        <td><?php echo $this->Html->link($video['Video']['nombre'], array('action' => 'view', $video['Video']['id']));?></td>
+        <td><?php echo $this->Html->link($video['Video']['nombre'], array('controller' => 'video', 
+						'action' => 'view_video', $video['Video']['id']));?></td>
         <td><?php echo  $this->Html->link('Delete', array('action' => 'deletevideo', $video['Video']['id']), null, 'Estas seguro?' )?></td>
         <?php endforeach; ?>
         </tr>

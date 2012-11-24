@@ -16,12 +16,12 @@
 			//$this->set('users', $this->User->find('list',array('conditions' => array('User.id' => $this->Auth->User('id')))));
 			$this->Post->create();
 				if ($this->request->is('post')) {
-				if ($this->Post->save($this->request->data)) {
-					$this->Session->setFlash('Tu post fue guardado');
-					$this->redirect(array('action' => 'index'));
+					if ($this->Post->save($this->request->data)) {
+						$this->Session->setFlash('Tu post fue guardado');
+						$this->redirect(array('action' => 'index'));
+					}
+				}
 			}
-			}
-		}
 
 		function edit($id = null) {
 		    $this->Post->id = $id;
