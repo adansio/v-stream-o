@@ -10,15 +10,12 @@ class User extends AppModel {
                          'dependent'=> true        ),
 						'Post' => Array('ClassName' => 'Post',
 						'foreignKey' => 'user_id'
-						)
-
-
-                    /*,'Historial' => array('className' => 'Historial', 
-                       'foreignKey'    => 'user_id',
+						),'Historiale' => array('className' => 'Historiale',
+						'foreignKey' => 'user_id',
                          //'conditions'    => array('Comentario.estado' => '1'),        
-                        'order'    => 'Historial.id DESC',            
-                        'limit'        => '5',           
-                        'dependent'=> true        )*/
+                        'order' => 'Historiale.id DESC',            
+                        'limit' => '5',           
+                        'dependent'=> true)
                         );
     
     

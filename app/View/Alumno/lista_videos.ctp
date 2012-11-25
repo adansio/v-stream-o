@@ -8,7 +8,7 @@
     <?php foreach ($videos as $video): ?>
     <tr>
         <td><?php echo $video['Video']['id']; ?></td>
-        <td><?php echo $this->Html->link($video['Video']['nombre'], array('controller'=>'video','action' => 'view_video', $video['Video']['id']));?></td>
+        <td><?php echo $this->Html->link($video['Video']['nombre'], array('controller'=>'alumno','action' => 'view_video', $video['Video']['id']));?></td>
         
         <?php endforeach; ?>
         </tr>

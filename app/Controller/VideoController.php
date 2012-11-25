@@ -1,7 +1,4 @@
 <?php
-//require_once("../webroot/getid3/getid3/getid3.php");
-//if(class_exists("getid3"))
-//{
 
 class VideoController extends AppController {
 	var $helpers = array('Form', 'Html', 'Time','Session');
