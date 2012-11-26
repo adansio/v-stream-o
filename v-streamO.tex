@@ -10,6 +10,8 @@
 
 \begin{document}
 \maketitle
+\newpage
+\tableofcontents
 \thispagestyle{empty}
 
 \newpage
@@ -56,8 +58,8 @@ complementarias de la UTFSM.
 restricciones pertinentes.
 \item Establecer sistema de video conferencias en la cual el profesor pueda mediante una webcam local
 realizar una ``clase on-line''.
-\item Los alumnos puedan observar las ``clases on-line''.% y realizar consultas al profesor a través de un 
-%sistema de chat interno.
+\item Los alumnos puedan observar las ``clases on-line'' y realizar consultas al profesor a través de un 
+sistema de chat interno.
 \end{enumerate}
 
 \subsubsection{Problemática que enfrenta}
@@ -75,17 +77,21 @@ simplemente no se cubren.
 
 \subsection{Descripción de la solución}
 A modo de solución a la problematica anterior, se establece este sistema, de forma que (ayudados de la buena
-voluntad de los profesores en cuanto a la contribución de material ya sea fundamental o complementario) 
-eventualmente, en algún momento el profesor publique material
-audiovisual como por ejemplo videos, ya sean de algún otro sitio como ``youtube'' o ``vimeo'' por ejemplo, o 
-que él mismo planifique una clase y esta sea filmada y luego publicada en un servidor establecido para dicho 
-propósito, y así dicho alumno pueda acceder al sistema y recibir de mejor forma dicho conocimiento, 
-o mejor aún, el profesor ayudado mediante el sistema V-stream'O podría
-acordar y luego realizar ``una clase o ayudantia on-line''.
+voluntad de los profesores en cuanto a la contribución de material ya sea fundamental o complementario), 
+eventualmente el profesor publique material
+audiovisual como por ejemplo videos, ya sean de algún otro sitio como ``youtube'' o ``vimeo'' entre otros, o 
+que él mismo planifique una clase en donde esta sea filmada y luego publicada en el sistema
+a implementar, y así dicho alumno podrá acceder al sitio web del sistema y revisar dicho contenido, 
+quizas con mayor detenimiento; o mejor aún, el profesor ayudado mediante el sistema V-stream'O podrá
+acordar y luego realizar ``una clase o ayudantia on-line'', en la cual sus alumnos podrán tener acceso a 
+a este, y ademaś existirá un chat en donde el alumno podrá realizar consultas que serán
+revisadas por el profesor mientras se realiza el streaming.
 
 \subsection{Tecnologías usadas}
 
-- Servidor Ubuntu 12.04 LTS.\\
+- Servidor web Apache en sistema operativo Debian (6.0 Squeeze).\\
+
+- Servidor de streaming en sistema operativo Ubuntu 10.04 (Lucid Lynx).\\
 
 - Lenguaje en servidor PHP.\\
 
@@ -99,57 +105,87 @@ acordar y luego realizar ``una clase o ayudantia on-line''.
 \newpage
 \section{Especificacón de los requerimientos}
 \subsection{Usuarios del sistema}
-\paragraph{Alumnos\\}
+\paragraph{Alumno\\}
 
 Los usuarios mayoritariamente beneficiados con este sistema son los alumnos, ya que principalmente
 el proyecto está enfocado a ellos, en el cual podrán obtener los recursos multimedia ya sea video
-o una clase via streaming, además de poder realizar consultas mientras se desarrolla dicha clase.
+o una clase via streaming, además de poder realizar consultas mientras se desarrolla dicha clase. Las 
+especificaciones son las siguientes:\\
+- Computador con acceso a internet.\\
+- Browser de preferencia Google-Chrome.\\
+- En caso de utilizar Firefox, este debe tener soporte para
+	HTML5 para poder reproducir videos, junto con los plugins adecuados, ya sea ffmpeg o biblioteca 
+	flashplayer.\\
 
-\paragraph{Profesores\\}
+\paragraph{Profesor\\}
 
-Los usuarios que aportaran en que el sistema cumpla el objetivo general, son lo profesores, 
+Los usuarios que aportarán en que el sistema cumpla el objetivo general, son lo profesores, 
 encargados de publicar periódicamente videos de interés, ya sean de orden importante o complementarios, 
 ademas de realizar ``clases on-line'' cuando ellos estimen conveniente, o corresponda por alguna situción
-en particular.
+en particular; la lista de especificaciones se detalla a continuación:\\
+- Computador con acceso a internet.\\
+- Browser de preferencia Google-Chrome.\\
+- En caso de utilizar Firefox, este debe tener soporte para
+	HTML5 para poder reproducir videos, junto con los plugins adecuados, ya sea ffmpeg o biblioteca 
+	flashplayer.\\
+- Webcam y micrófono para poder realizar el streaming.\\
+- Obtener el archivo de configuracón para poder comenzar el stramening.\\
+
 \subsection{Descripción de los requerimientos}
 \subsubsection{Funcionales}
 
 - Permitir al usuario no registrado acceder a cierto contenido público.\\
 
-%- Permitir al usuario registrado matricularse en un curso.\\
+- Permitir al usuario Alumno registrarse en el sistema, con un username del tipo nombre.alumno@alumnos.usm.cl,
+	Password con un mínimo de 6 caracteres, Nombre, Rut, Rol, código de Carrera. Dependerá del alumno realizar
+	una correcta inscripción de su cuenta. en caso de quere modificar algún campo luego de la inscripción,
+	deberá contactarse con un administrador.\\
 
-- Permitir al usuario registrado buscar videos dentro de los disponibles por profesor.\\
+- Permitir al usuario Alumno ver a los profesores disponibles y sus publicaciones.\\
 
-- Permitir al usuario registrado ver videos.\\
+- Permitir al usuario Alumno ver los videos publicados por el profesor.\\
 
-- Permitir al usuario registrado mantener un historial con los útimos videos observados.\\ 
+- Permitir al usuario Alumno mantener un historial con las fechas de los útimos videos observados.\\ 
 
-- Permitir al usuario Profesor modificar su portada de contenidos.\\
+- La creación de un usuario tipo Profesor debe ser a través de un Administrador.\\
+
+- Permitir al usuario Profesor modificar su contenido.\\
 
 - Permitir al usuario Profesor publicar contenido de tipo ``POST''.\\
 
 - Permitir al usuario Profesor modificar o editar los contenidos de tipo ``POST''.\\
 
-- Permitir al usuario Alumno ver los contenidos de las publicaciones de tipo ``POST'' de algún profsor en 
-particular.\\
+- Permitir al usuario Profesor cargar videos en el servidor para una eventual reproducción por parte los
+	alumnos.\\
+
+- Permitir al usuario Profesor eliminar videos subidos previamente.\\
+
+- Permitir al usuario Profesor realizar streaming de video y audio.\\
+
+- Permitir al usuario Profesor observar un chat mientras se realiza el streaming, para eventualmente 
+	poder responder posibles interrogantes de parte de los alumnos.\\
 
 \newpage
 \subsubsection{No Funcionales}
 
 \paragraph{- De Buen rendimiento} en cuanto a la calidad del servicio, ya sea su disponibilidad para acceder a los 
-contenidos o como para poder participar de una video conferencia.\\
+contenidos o como para poder participar de una video conferencia. Si bien no se ha comprobado a gran escala
+el correcto funcionamiento, este ha funcionado con 4 usuarios concurrentemente conectados.\\
 
 \paragraph{- Seguro} en el sentido de integridad de los datos y su consistencia, para poder acceder a los contenidos
-pertinentes según los permisos que se tengan.\\
+pertinentes según los permisos que se tengan. Por medio del model MVC, se han separado correctamente los datos, 
+además de un correcto planteamiento de la base de datos en la cual no existen datos repetidos, en los cuales
+pudiesen haber incongruencias injsutificadas.\\
 
 \paragraph{- Accesible} y de rápida asimilación, que sea una interfaz intuitiva para el usuario, sin mayores
-ambigüedades.\\
+ambigüedades. En si el dise\~no es bastante sencillo, de rápida navegabilidad.\\
 
 \paragraph{- Escalable}, si bien es un modelo a una peque\~na escala, el dise\~no debe soportar una amplia 
 expansión en cuanto a gran cantidad de usuarios utilizando el servicio.\\
 
 \paragraph{- Administrable} por parte, tanto del profesor que será quien dispondrá del contenido para su posterior
-reproducción, como del alumnado, bien en menor medida; y por que no, eventualmente que sea personalizable.\\
+reproducción. En esta segunda fase se han publicado ciertos campos, quizas para una eventual mejora del sistema
+se podrian a\~nadir mas campos y otras formas de mostrar la información que se requiera.\\
 
 \newpage
 \subsection{Tareas de Usuario}
@@ -169,15 +205,17 @@ mediante este sistema.\\
 
 \subsection{Funciones del Sistema}
 
-\paragraph{En el lado del servidor\\\\}
+\subsubsection{En el lado del servidor}
 
--	Mantención de cuentas del cliente en general, ya sea para alumno, profesor por parte de un administrador.\\
+-	Mantención de cuentas del cliente en general, ya sea para alumno, profesor, por parte de un administrador.\\
 
--	Gestión y creación de las cuentas para profesor y alumno.\\
+-	Gestor para la creación de cuentas para alumno.\\
+
+- 	Atención para la gestión en la creacion de cuenta para profesor.\\
 
 -	Gestión de los accesos y permisos correspondientes para cada usuario en particular.\\
 
--	Controla las sesiones de cada cliente conectado, de forma tal de brindarle el servicio correspondiente.\\
+-	Control de las sesiones de cada cliente conectado, de forma tal de brindarle el servicio correspondiente.\\
 
 -	Almacenamiento de los recursos multimedia almacenados por el cliente (profesor) para una posterior
 reproducción de otro cliente (alumno u otro profesor).\\
@@ -187,7 +225,15 @@ reproducción de otro cliente (alumno u otro profesor).\\
 -	En el caso del streaming, que brinde buen servicio a los clientes conectados, tanto a los usuarios
 conectados al streaming, como a los que no lo estan.\\
 
-\paragraph{En el lado del cliente\\\\}
+-	Almacenamiento de las publicaciones por parte de los profesores, ya sea para realizar algún comentario,
+	o para una programar una futura video-conferencia.\\
+
+-	Creación, edición y eliminación de un elemento de tipo publicación.\\
+
+- 	Creacion y eliminación de un elemento de tipo video.\\
+
+
+\subsubsection{En el lado del cliente}
 
 -	Al momento de ingresar al sistema autenticándose, corroborar que el usuario está ya registrado en
 el sistema para poder acceder a los contenidos respectivos.\\
@@ -201,15 +247,16 @@ en caso de algún desperfecto, este usuario deberá contactar al administrador d
 modificaciones, para el caso de un profesor, este se econtrará a cargo de un administrador quien irá validando 
 los datos entregados.\\
 
--	Una vez que el cliente esta autenticado, dependiendo del tipo de usuario (alumno, profesor o 
-administrador), podrá realizar diferentes actividades.\\
+-	Una vez que el cliente está autenticado, dependiendo del tipo de usuario (alumno, profesor o 
+administrador), podrá realizar diferentes actividades, y distintos permisos, estos son detallados
+más adelante de mejor forma en el esquema navegacional.\\
 
 -	Para el caso del cliente-profesor, podrá ver y publicar videos, publicar posts, realizar la programación 
 de las futuras clases on-line y eventualmente llevarlas a cabo mediante el streaming.\\
 
--	Para el caso del cliente-alumno, podrá ver videos publicados por ramo o por profesor
-inscrito, podrá ver clases on-line y tambien realizar consultas al profesor respectivo durante el 
-streaming.
+-	Para el caso del cliente-alumno, podrá ver videos publicados según un profesor,
+podrá ver clases on-line y tambien realizar consultas al profesor respectivo durante el 
+streaming, mediante un chat interno.
 
 \newpage
 \section{Dise\~no de la interfaz de usuario}
@@ -396,7 +443,7 @@ class AdminController extends AppController {
 ?>
 \end{verbatim}
 
-\subsection{Otras Consideraciones\\}
+\subsection{Otras Consideraciones}
 -	Para completar el proyecto aun falta todo lo que son las vistas e interfaces de usuario, que es lo que quedaría 
 para hacer en esta segunda parte del proyecto.\\
 
