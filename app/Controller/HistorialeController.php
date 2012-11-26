@@ -9,11 +9,25 @@ class HistorialeController extends AppController {
 	function index() {
 		
 		$this->set('historiales', $this->Historiale->find('all',
-		             array('conditions' => array('user_id' => $this->Session->Read('Auth.User.id')))));
-		}
+		             array('conditions' => array('user_id' => $this->Session->Read('Auth.User.id'), 'video_id <>' =>  0 ),
+					      'order'=> 'Historiale.id Desc'
+					 )));
+	
+
+	
+	}	
 	
 	function view_video($id = null) {
 		 $this->Video->id = $id;
 	     $this->set('video', $this->Video->read());
 	}
+
+	
+
+		           
+		           
+
+
+
 }
+

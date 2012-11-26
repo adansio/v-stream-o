@@ -18,8 +18,8 @@ class AlumnoController extends AppController {
 	function index() 
 	{
 		$this->set('profes', $this->User->find('all',array('conditions' => array('User.tipo' => 0))));
-		$this->set('historiales', $this->Historiale->find('all', 
-			array('conditions' => array('user_id' => $this->Session->Read('Auth.User.id')))));
+	//	$this->set('historiales', $this->Historiale->find('all', 
+	//		array('conditions' => array('user_id' => $this->Session->Read('Auth.User.id')))));
 		$this->set('carreras', $this->Carrera->find('all'));
 		$this->set('departamentos', $this->Departamento->find('all'));
 	}
