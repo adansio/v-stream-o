@@ -26,10 +26,10 @@
 <?php echo $this->Form->end(__('Submit')); ?>
 
 
-<p><?php 
+<div class="boton"><?php 
 if ($this->Session->read('Auth.User.tipo') == 2)
-    echo $this->Html->link('volver', array('controller' => 'admin','action' => 'index')); 
+    echo $this->Html->link('Volver', array('controller' => 'admin','action' => 'index')); 
 else
-    echo $this->Html->link('volver', array('controller' => 'users','action' => 'login'));
-?></p>
+    echo $this->Html->link('Volver', array('controller' => 'users','action' => 'login'));
+?></div>
 </div>

@@ -11,7 +11,7 @@
 <p></p>
 <p><?php echo $this->Html->link('logout', array('controller' => 'users','action' => 'logout')); ?></p>
 
-<p><?php 
+<div class="boton"><?php 
 if ($this->Session->read('Auth.User.tipo') == 2){
 echo $this->Html->link('volver', array('controller' => 'admin','action' => 'lista_videos')); 
 }
@@ -25,4 +25,4 @@ echo $this->Html->link('volver', array('controller' => 'video','action' => 'inde
 }
 
 
-?></p>
+?></div>

@@ -15,7 +15,7 @@ if ($this->Session->read('Auth.User.tipo') == 0 || $this->Session->read('Auth.Us
 	echo $this->Form->end('Save Post');
 ?>
 
-<p><?php echo $this->Html->link('volver', array('controller' => 'posts','action' => 'index')); ?></p>
+<div class="boton"><?php echo $this->Html->link('Volver', array('controller' => 'posts','action' => 'index')); ?></div>
 
 <?php }
 	else echo "sin permisos"; ?>

@@ -14,4 +14,4 @@
         </tr>
         </table>
         
-        <p><?php echo $this->Html->link('volver', array('controller' => 'alumno','action' => 'viewprofe',  $video['Video']['user_id'])); ?></p>
+        <div class="boton"><?php echo $this->Html->link('Volver', array('controller' => 'alumno','action' => 'viewprofe',  $video['Video']['user_id'])); ?></div>

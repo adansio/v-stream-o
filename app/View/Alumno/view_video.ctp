@@ -11,18 +11,18 @@
 <p></p>
 <p><?php echo $this->Html->link('logout', array('controller' => 'users','action' => 'logout')); ?></p>
 
-<p><?php 
+<div class="boton"><?php 
 if ($this->Session->read('Auth.User.tipo') == 2){
-echo $this->Html->link('volver', array('controller' => 'admin','action' => 'lista_videos')); 
+echo $this->Html->link('Volver', array('controller' => 'admin','action' => 'lista_videos')); 
 }
 
 if ($this->Session->read('Auth.User.tipo') == 1){
-echo $this->Html->link('volver', array('controller' => 'alumno','action' => 'lista_videos', $video['Video']['user_id'] )); 
+echo $this->Html->link('Volver', array('controller' => 'alumno','action' => 'lista_videos', $video['Video']['user_id'] )); 
 }
 
 if ($this->Session->read('Auth.User.tipo') == 0){
-echo $this->Html->link('volver', array('controller' => 'video','action' => 'index', $video['Video']['user_id'])); 
+echo $this->Html->link('Volver', array('controller' => 'video','action' => 'index', $video['Video']['user_id'])); 
 }
 
 
-?></p>
+?></div>

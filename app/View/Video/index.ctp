@@ -2,8 +2,8 @@
 
 <?php 
 if ($this->Session->read('Auth.User.tipo') == 0 || $this->Session->read('Auth.User.tipo') == 2) { ?>
-<p><?php echo $this->Html->link('Add Videos', array('controller'=>'video','action' => 'add')); ?></p>
-
+<div class="boton"><?php echo $this->Html->link('Agregar Video', array('controller'=>'video','action' => 'add')); ?></div>
+<br>
 <table>
     <tr>
         <th>Id</th>
@@ -20,7 +20,7 @@ if ($this->Session->read('Auth.User.tipo') == 0 || $this->Session->read('Auth.Us
         </tr>
         </table>
 
-        <td><?php echo  $this->Html->link('volver', array('controller' => 'profe', 'action' => 'index'))?></td>
+        <div class="boton"><?php echo  $this->Html->link('volver', array('controller' => 'profe', 'action' => 'index'))?></div>
 	<?php }
 			else echo "sin permisos"; ?>
 

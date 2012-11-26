@@ -8,14 +8,9 @@
 <h1><?php echo 'Oficina '.$user['User']['oficina']?></h1>
 <h1><?php echo 'About: '.$user['User']['about']?></h1>
 
-<p><? 
-//echo $this->Html->link('Editar Datos', array('controller' => 'users','action' => 'edit', $user['User']['id']) ); ?></p>
+<div class="boton" ><?php echo $this->Html->link('Logout', array('controller' => 'users','action' => 'logout')); ?></div>
 
-
-
-<p><?php echo $this->Html->link('logout', array('controller' => 'users','action' => 'logout')); ?></p>
-
-<p><?php echo $this->Html->link('volver', array('controller' => 'profe','action' => 'index')); ?></p>
+<div class="boton"><?php echo $this->Html->link('Volver', array('controller' => 'profe','action' => 'index')); ?></div>
 
 
 	

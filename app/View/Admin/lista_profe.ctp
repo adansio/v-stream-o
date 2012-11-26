@@ -17,4 +17,4 @@
 <br>
 <table>
 
-<p><?php echo $this->Html->link('volver', array('controller' => 'admin','action' => 'index')); ?></p>
+<div class="boton"><?php echo $this->Html->link('Volver', array('controller' => 'admin','action' => 'index')); ?></div>

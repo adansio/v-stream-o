@@ -1,17 +1,17 @@
 
-<h1>Videos</h1>
+<h1>V-Stream'O</h1>
 
-<th>Bienvenido <?php echo $this->Session->read('Auth.User.nombre')?></th>
+<h2>Bienvenido <?php echo $this->Session->read('Auth.User.nombre')?></h2>
 
 
-<p><?php echo $this->Html->link('Lista de Profesores', array('controller' => 'alumno','action' => 'lista_profe')); ?></p>
+<div class="boton"><?php echo $this->Html->link('Lista de Profesores', array('controller' => 'alumno','action' => 'lista_profe')); ?></div>
 
-<th><?php echo $this->Html->link('Historial', array('controller' => 'historiale','action' => 'index')); ?></th>
+<div class="boton"><?php echo $this->Html->link('Historial', array('controller' => 'historiale','action' => 'index')); ?></div>
 </tr>
 <br><br>
 <br>
 
 
-<p><?php echo $this->Html->link('Perfil', array('controller' => 'alumno','action' => 'viewuser')); ?></p>
-<p><?php echo $this->Html->link('logout', array('controller' => 'users','action' => 'logout')); ?></p>
+<div class="boton"><?php echo $this->Html->link('Perfil', array('controller' => 'alumno','action' => 'viewuser')); ?></div>
+<div class="boton"><?php echo $this->Html->link('logout', array('controller' => 'users','action' => 'logout')); ?></div>
 

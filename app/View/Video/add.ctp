@@ -1,4 +1,4 @@
-<h1>Add Video</h1>
+<h1>Agregar Video</h1>
 <html>
     <head>
 	        <title>Rellene el formulario</title>
@@ -26,5 +26,5 @@
 	</body>
 </html>
 <br>
-<p><?php echo $this->Html->link('volver', array('controller' => 'profe','action' => 'index')); ?></p>
+<div class="boton"><?php echo $this->Html->link('Volver', array('controller' => 'profe','action' => 'index')); ?></div>
 

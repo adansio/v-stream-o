@@ -5,8 +5,8 @@
 	<p><?php echo $post['Post']['body']?></p>
 	<p><small>Publicado el: <?php echo $post['Post']['created']?></small></p>
 	<?php if(date('Y-m-d H:i:s')  > $post['Post']['created']){  ?>
-	<p><A HREF="http://190.45.19.207/streaming/ch0.html">Streaming</A>
+	<div class="boton"><A HREF="http://190.45.19.207/streaming/ch0.html">Streaming</div>
 	<?php } ?>
 
-<p><?php echo $this->Html->link('volver', array('controller' => 'posts','action' => 'lista_posts', 
-								$post['Post']['user_id'])); ?></p>
+<div class="boton"><?php echo $this->Html->link('Volver', array('controller' => 'posts','action' => 'lista_posts', 
+								$post['Post']['user_id'])); ?></div>

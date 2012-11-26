@@ -1,5 +1,5 @@
 
-<h2>Lista de Streaming</h2>
+<h2>Publicaciones</h2>
 
 <table>
     <tr>
@@ -17,15 +17,15 @@
         </tr>
         </table>
         
-	<?php if ($this->Session->read('Auth.User.tipo') == 2){
-			echo $this->Html->link('volver', array('controller' => 'admin','action' => 'index')); 
-		 }
-		if ($this->Session->read('Auth.User.tipo') == 1){
-			echo $this->Html->link('volver', array('controller' => 'alumno',
-							'action' => 'viewprofe', $post['Post']['user_id'] )); 
-		 }
-		if ($this->Session->read('Auth.User.tipo') == 0){
-			echo $this->Html->link('volver', array('controller' => 'Profe','action' => 'index', 
-			$post['Post']['user_id'])); 
-		}
+	<?php if ($this->Session->read('Auth.User.tipo') == 2){ ?>
+			<div class="boton"><?php echo $this->Html->link('Volver', array('controller' => 'admin','action' => 'index')); ?></div>
+	<?	 }
+		if ($this->Session->read('Auth.User.tipo') == 1){ ?>
+			<div class="boton"><?php echo $this->Html->link('Volver', array('controller' => 'alumno',
+							'action' => 'viewprofe', $post['Post']['user_id'] )); ?></div>
+	<?	 }
+		if ($this->Session->read('Auth.User.tipo') == 0){ ?>
+			<div class="boton"><?php echo $this->Html->link('Volver', array('controller' => 'Profe','action' => 'index', 
+			$post['Post']['user_id'])); ?></div>
+	<?	} ?>
 

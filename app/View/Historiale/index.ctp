@@ -12,5 +12,5 @@
 	<?php endforeach; ?>
 	</table>
 
-<p><?php echo $this->Html->link('volver', array('controller' => 'alumno','action' => 'index')); ?></p>
+<div class="boton"><?php echo $this->Html->link('volver', array('controller' => 'alumno','action' => 'index')); ?></div>
 

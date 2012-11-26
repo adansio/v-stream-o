@@ -1,20 +1,20 @@
 <!-- File: /app/View/Posts/index.ctp -->
 
-<h2>Streaming</h2>
+<h2>Publicaciones</h2>
 <?php 
 ###########
 ##Si usuario es profesor o Administrador muestra lo siguiente
 ##########
 if ($this->Session->read('Auth.User.tipo') == 0 || $this->Session->read('Auth.User.tipo') == 2) { ?>
 
-<p><?php echo $this->Html->link("Add Post", array('action' => 'add')); ?></p>
+<div class="boton"><?php echo $this->Html->link("Agregar Post", array('action' => 'add')); ?></div>
 
 	<table>
 		<tr>
 			<!--th>Id</th-->
-			<th>Title</th>
-			<th>Action</th>
-			<th>Created</th>
+			<th>Título</th>
+			<th>Acción</th>
+			<th>Creado</th>
 		</tr>
 
 <?php foreach ($posts as $post): ?>
@@ -41,7 +41,7 @@ if ($this->Session->read('Auth.User.tipo') == 0 || $this->Session->read('Auth.Us
 	
 	</table>
 	
-			<td><?php echo $this->Html->link('volver', array('controller' => 'Profe', 'action' => 'index'))?></td>
+			<div class="boton"><?php echo $this->Html->link('Volver', array('controller' => 'Profe', 'action' => 'index'))?></div>
 	<?php } ########
 			##En caso que sea un alumno o el usuario no este logueado
 			#######
@@ -64,6 +64,6 @@ if ($this->Session->read('Auth.User.tipo') == 0 || $this->Session->read('Auth.Us
 	
 	</table>
 	
-			<td><?php echo $this->Html->link('volver', array('controller' => 'Alumno', 'action' => 'viewprofe', $post['Post']['user_id']))?></td>
+			<div class="boton"><?php echo $this->Html->link('Volver', array('controller' => 'Alumno', 'action' => 'viewprofe', $post['Post']['user_id']))?></div>
 
 <?php } ?>
