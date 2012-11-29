@@ -189,7 +189,7 @@ se podrian a\~nadir mas campos y otras formas de mostrar la información que se 
 
 \newpage
 \subsection{Tareas de Usuario}
-\paragraph{Alumnos\\}
+\paragraph{Alumno\\}
 
 El Alumno podrá hacer las peticiones a su respectivo profesor para que haga aportes tanto de temas 
 centrales como de temas complementarios, y una vez que se disponga del material, este podrá consumir
@@ -261,12 +261,31 @@ streaming, mediante un chat interno.
 \newpage
 \section{Dise\~no de la interfaz de usuario}
 \subsection{Esquema Navegacional}
-Esquema Navegacional en la Figura ~\ref{fig:diagrama_Navegabilidad}.
+Diagrama de navegabilidad: muestra la navegabilidad de parte de un usuario cliente del servicio.\\
+Esquema Navegacional en la Figura ~\ref{fig:Nav}.
 
 \subsection{Prototipos de Pantallas}
-Prototipo de Pantalla en Figura~\ref{fig:vista}
+Vista de Administrador en Figura~\ref{fig:Admin}
 
-Prototipo de Pantalla en Figura~\ref{fig:login}
+Vista de Loginen Figura~\ref{fig:login}
+
+Vista de lista de profesores en Figura~\ref{fig:lista_prof_admin}
+
+Vista de lista de publicaciones en Figura~\ref{fig:lista_pub}
+
+Vista de lista de videos en Figura~\ref{fig:lista_vid}
+
+Vista de agregar posts en Figura~\ref{fig:add_post}
+
+Vista de reproducir video en Figura~\ref{fig:ver_post}
+
+Vista de Streaming en Figura~\ref{fig:streaming}
+
+Vista de reproducir video en Figura~\ref{fig:ver_video}
+
+Vista de reproducir video en Figura~\ref{fig:add_video}
+
+
 
 \newpage
 \section{Dise\~no del Sistema}
@@ -280,14 +299,45 @@ Estas capas constan de:\\
 Al realizar un enfoque a como se ha implementado en el sistema, junto con el framework se ha implementado de mejor 
 forma este modelo, debido a como está estructurado, y como es la distribucion dentro del proyecto de los archivos.
 
+En el caso del modelo usuario se ocupa el User.php donde se especifican las realciones a la base de datos y la 
+validacion de datos, en su controlador están las funciones que maneja los datos. En el directorio View/User se 
+encuentran las interfaces de usuario para el modelo.\\
+
 \subsection{Dise\~no Lógico}
 \subsubsection{Diagrama de Clases}
-Diagrama de Clases en la figura ~\ref{fig:DiagramaClases}.
+Diagrama de Clases: contiene las clases relacionadas en la aplicación, se muestra que un usuario generaliza al 
+administrador, profesor y alumno, donde pueden loguearse, insertar un nuevo integrante y cerrar sesión. 
+Un usuario tiene muchos videos relacionados, donde se pueden subir, ver y borrar videos. Para el streamig se 
+ocupa las publicaciones, donde se pude publicar, borrar y editar los post, también se pude transmitir el 
+streaming. El lenguaje usado para modelar es UML. \\
 
-\subsubsection{Diagramas de Flujo}
-Diagrama de Flujo en Figura~\ref{fig:diagramaflujo}.
+Diagrama de Clases en la figura ~\ref{fig:Clases}.
+
+\subsubsection{Diagramas de Secuencias}
+Diagrama de Secuencia: muestra la interacción entre los actores y el sistema, en los distintos casos de uso
+del software.\\
+
+Diagrama ver publicacion en las Figura~\ref{fig:al_publ}.
+
+Diagrama ver video en la Figura~\ref{fig:al_vid}.
+
+Diagrama eliminar usuario en la Figura~\ref{fig:sec_del_user}.
+
+Diagrama borrar video en la Figura~\ref{fig:del_vid}.
+
+Diagrama ingresar usuario en la Figura~\ref{fig:ing_user}.
+
+Diagrama publicacion profesor en la Figura~\ref{fig:sec_pub_prof}.
+
+Diagrama subir video en la Figura~\ref{fig:sub_vid}.
+
+Diagrama streaming en profesor en la Figura~\ref{fig:str_pr}.
+
 
 \subsubsection{Modelo de Datos}
+Modelo de Datos: muestra las tablas alojadas en la base de datos, donde se muestra la relación entre las 
+tablas por medio del lenguaje Entidad-Relación. \\
+
 Modelo de Datos en la Figura ~\ref{fig:moddatos}.
 
 
@@ -295,144 +345,148 @@ Modelo de Datos en la Figura ~\ref{fig:moddatos}.
 \newpage
 \section{Implementación}
 \subsection{Descripción de las Componentes}
-A continuación se muestran ciertas partes del código, incluyendo principalmento las partes mas relevantes en base 
-al desarrollo que fue en base al modelo de tres capas, siendo "la lógica del negocio" lo mas importante, contenida
-en los controladores.
-\newpage
-AlumnoController.php\\
-Se manejan los métodos necesarios para resgitrar y loguear usuarios, se desprende de modelo User.php, donde toma y maneja atributos de método Auth de Cakephp, que facilita el manejo de sesiones.
-\footnotesize
-\begin{verbatim}
-<?php
-class AlumnoController extends AppController {
-	var $helpers = array('Form', 'Html', 'Time');
-    var $uses = array('Alumno', 'Video', 'User', 'Historial', 
-						'Carrera', 'Departamento');
-    public function isAuthorized($user){
-	    if(in_array($this->action, array('index3','lista', 
-							'view','listacar', 'viewuser'))) {
-		    if($user['tipo'] == 1 ){
-				return true;
-			}
-		}
-        return false;
-    }
-	function index3() {
-		$this->set('profes', $this->User->find('all',array('conditions' => 
-												array('User.tipo' => 0))));
-		$this->set('historials', $this->Historial->find('all',
-						array('conditions' => array('user_username' => 
-											$this->Auth->User('username')))));
-		$this->set('carreras', $this->Carrera->find('all'));
-		$this->set('departamentos', $this->Departamento->find('all'));
-	}
-	function lista($id = null){
-		$this->set('videos', $this->Video->find('all', array('conditions' => 
-											array('Video.user_id' => $id))));
-    }
-	function listacar($id = null){
-		$this->set('videos', $this->Video->find('all', array('conditions' => 
-											array('User.carrera_id' => $id))));
-    }
-	function view($id = null) {
-		$this->Video->id = $id;
-		$this->set('video', $this->Video->read());
-	}
-	function viewuser() {
-	    $this->User->id = $this->Auth->User('id');
-	    $this->set('user', $this->User->read());
-}	}
-?>
-\end{verbatim}
-\newpage
-ProfeController.php
-Se manejan los metodos que serán ocupados por el profesor, se desprende de modelo Profe.php.
-\footnotesize
-\begin{verbatim}
-<?php
-class ProfeController extends AppController {
-	var $helpers = array('Form', 'Html', 'Time');
-    var $uses = array('Profe', 'Video', 'User','Carrera');
+\paragraph{Implementación\\}
+Códigos de Modelos, en estos códigos se representan la estructura, asociaciones y validaciones de datos de los 
+Modelos, que representan las tablas en la Base de Datos, a continuación se describen los más importantes.\\
+User.php: Contiene la relación ``hasmany''  con el Modelo Video, Historiale y Post;  un usuario tiene muchos videos.
+La relación ``belongto'' con el Modelo carrera, un Usuario pertenece a una carrera. Luego se describen la validación 
+de los datos más importantes de entrada, el username que debe existir y debe ser un mail, la password que debe 
+existir y con un mínimo de seis caracteres, donde se guarda encriptada en la Base de datos.\\
 
-	public function isAuthorized($user){
-		if(in_array($this->action, array('index2','add','delete',
-											'view', 'viewuser'))){
-			if($user['tipo'] == 0 ){
-				return true;
-		 	}   
-        }   					    
-	    return false;
-	}   
-	function index2() {
-		$this->set('videos', $this->Video->find('all',array('conditions' 
-						=> array('Video.user_id' => $this->Auth->User('id')))));
-	}   
-	function add() {    
-		if (!empty($this->data)) {    
-			$this->data['Video']['Video.usuario_id']=$this->Auth->User('id');
-		    	if ($this->Video->save($this->data)) {    
-					$this->Session->setFlash('El video fue subido');    
-					$this->redirect(array('action' => 'index2'));    
-				}   
-	    }   
-	}   
-    function delete($id) {
-	    if ($this->Video->delete($id)){
-			$this->Session->setFlash('El video with id: '.$id.' fue borrado.');
-			$this->redirect(array('action'=>'index2'));
+\footnotesize
+\begin{verbatim}
+#app/Model/User.php
+<?php
+class User extends AppModel {
+    public $name = 'User';
+	var $hasMany = array('Video' => array('className' => 'Video', 
+                    		'foreignKey'=> 'user_id',
+                      		'order'    => 'Video.id DESC',            
+	   		         		'dependent'=> true        ),
+		 	      		'Post' => Array('ClassName' => 'Post',
+							'foreignKey' => 'user_id'),
+							'Historiale' => array('className' => 'Historiale', 
+												'foreignKey' => 'user_id',
+							'order' => 'Historiale.id DESC',            
+						    'limit' => '5',           
+	                        'dependent'=> true));
+	var $belongsTo = array('Carrera' => array(  'className'=> 'Carrera', 
+												'foreignKey'=>'carrera_id' )); 
+					 public $displayField = 'username';	
+	var $validate = array( 'username' => array('email' => array('rule' => 'email',
+	                       'required' => true, 
+	                       'message' => 'Introduzca su nombre de usuario.'),
+						   'isUnique'=>array('rule'=>'isUnique',
+                           'required' => true, 
+			               'message' => 'El nombre ya ha sido ocupado'), ),
+						   'password' => array('rule' => array('minLength', '6' ),
+	                       'required' => true,
+                           'message' => 'Debe contener minimo 6 caracteres')
+                           );
+
+	public function beforeSave($options = array()) {
+		if (isset($this->data[$this->alias]['password'])) {
+			$this->data[$this->alias]['password'] = 
+						AuthComponent::password($this->data[$this->alias]['password']);
 		}
+	    return true;
 	}
-	function view($id = null) {
-    	$this->Video->id = $id;
-		$this->set('video', $this->Video->read());
-	}
-	function viewuser() {
-		$this->User->id = $this->Auth->User('id');
-		$this->set('user', $this->User->read());
-    }
+
+}
+\end{verbatim}
+
+Video.php: Contiene la relación belongto con el Modelo User, un videoo pertenece a un usuario.\\
+\footnotesize
+\begin{verbatim}
+<?php
+class Video extends AppModel {
+	public $name = 'Video';
+    var $uses = array('User','Historiale');
+	var $belongsTo = array('User' => array('className' => 'User', 
+						   'foreignKey'   => 'user_id' ));  
+	var $validate = array('nombre' => array('rule' => 'notEmpty'), 
+							'user_id' => array('rule' => 'notEmpty'));
 }
 ?>
 \end{verbatim}
-\newpage
-AdminController.php
-Se manejan los metodos que serán ocupados por el profesor, se desprende de modelo Admin.php.
+
+Post.php: Contiene la relación belongto con el Modelo User, un post pertenece a un usuario.\\
+\footnotesize
+\begin{verbatim}
+<?php
+class Post extends AppModel {
+	public $name = 'Post';
+	public $validate = array('title' => array(
+	            			'rule' => 'notEmpty'),
+					        'body' => array(
+			            	'rule' => 'notEmpty');
+	var $belongsTo = array('User' => array(  'className'=>'User', 
+											'foreignKey'   => 'user_id',
+											'order' => 'Post.id DESC'));
+}?>
+\end{verbatim}
+
+Historiale.php: Contiene la relación belongto con el Modelo User, un historial pertenece a un usuario.\\
+
+\footnotesize\begin{verbatim}
+<?php
+class Historiale extends AppModel {
+	public $name = 'Historiale';
+    var $uses = array('User','Video');
+    var $belongsTo = array('User' => array('className' => 'User',
+						'foreignKey'   => 'user_id' ));
+   }	
+?>
+\end{verbatim}
+
+Código de Controladores, en estos códigos es donde se maneja la capa de negocios de la aplicación, se trabaja 
+con las consultas a la base de datos y se procesan las variables involucradas, en funciones definidas, 
+a las cuales se le asocia una vista, inicializan con el index.\\
+
+Admin Controller.php: es este código se contiene las funciones para realizar las vistas de videos y profesores, 
+y la capacidad para borrarlos.\\
 \footnotesize
 \begin{verbatim}
 <?php
 class AdminController extends AppController {
 	var $helpers = array('Form', 'Html', 'Time');
 	var $uses = array('Alumno', 'Profe', 'Video', 'User','Carrera');
-	    
 	public function isAuthorized($user){
-		if(in_array($this->action, array('index4','view','viewuser', 
-										'deleteuser', 'deletevideo' ))){
+		if(in_array($this->action, array('index','view','viewuser', 
+					'deleteuser', 'deletevideo', 'lista_profe', 
+					'lista_videos' )))
+		{
 			if($user['tipo'] == 2 ){
-			return true;
-	    	}   
-		}   
-																	    
+				return true;
+			}
+		}
 		return false;
-	}   
+	}
 	
-	function index4() {
-		$this->set('users', $this->User->find('all'));
-		$this->set('videos', $this->Video->find('all'));
-	}   																									    
+	function index() {
+
+	}
+
 	function deletevideo($id) {
 		if ($this->Video->delete($id)){
 			$this->Session->setFlash('El video with id: '.$id.' fue borrado.');
-			$this->redirect(array('action'=>'index4'));
-		}   
-    }   
+			$this->redirect(array('action'=>'index'));
+		}
+	}
+
 	function deleteuser($id) {
-	    if ($this->User->delete($id)){
+		if ($this->User->delete($id)){
 			$this->Session->setFlash('El usuario with id: '.$id.' fue borrado.');
-			$this->redirect(array('action'=>'index4'));
-		}   
-	}   
-    function view($id = null) {
-        $this->Video->id = $id;
-	    $this->set('video', $this->Video->read());
+			$this->redirect(array('action'=>'index'));
+		}
+	}
+	
+	function lista_profe(){
+		$this->set('users', $this->User->find('all'));
+	}
+
+	function lista_videos(){
+		$this->set('videos', $this->Video->find('all'));
 	}
 	
 	function viewuser($id = null) {
@@ -443,6 +497,297 @@ class AdminController extends AppController {
 ?>
 \end{verbatim}
 
+ProfeController.php: es este código se contiene las funciones para ver su perfil en viewuser() y transmitir
+video a través de estreaming.\\
+\footnotesize
+\begin{verbatim}
+<?php
+class ProfeController extends AppController {
+	var $helpers = array('Form', 'Html', 'Time');
+	var $uses = array('Profe', 'Video', 'User','Carrera','Post','Alumno');
+	public function isAuthorized($user){
+		if(in_array($this->action, array('index','add','delete',
+					'view', 'viewuser', 'viewprofe', 'transmitir')))
+		{
+			if($user['tipo'] == 0 )
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	function index() {
+	$this->set('videos', $this->Video->find('all',
+				array('conditions' => array(
+				'Video.user_id' => $this->Auth->User('id')))));
+	$this->set('posts', $this->Post->find('all'));
+	}
+
+	function transmitir() {
+	}
+
+	function view($id = null) {
+		$this->Video->id = $id;
+		$this->set('video', $this->Video->read());
+	}
+
+	function viewuser() {
+		$this->User->id = $this->Auth->User('id');
+		$this->set('user', $this->User->read());	
+	}
+}
+?>
+\end{verbatim}
+
+AlumnoController.php: en este código se maneja las acciones que realiza el ayudante, su perfil, 
+la lista de profes, la lista de videos y la vista para ver el perfil del profe. \\
+\footnotesize
+\begin{verbatim}
+<?php
+class AlumnoController extends AppController {
+	var $helpers = array('Form', 'Html', 'Time');
+	var $uses = array('Alumno', 'Profe', 'Video', 'User', 
+	'Historiale', 'Carrera', 'Departamento');
+	public function isAuthorized($user)
+	{
+		if(in_array($this->action, array('index', 'lista_videos', 'view_video',
+			'listacar', 'viewuser', 'viewprofe','lista_profe'))) 
+		{
+			if($user['tipo'] == 1 )
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	function index() 
+	{
+		$this->set('profes', $this->User->find('all',array(
+						'conditions' => array('User.tipo' => 0))));
+		$this->set('carreras', $this->Carrera->find('all'));
+		$this->set('departamentos', $this->Departamento->find('all'));
+	}
+
+	function lista_videos($id = null)
+	{
+		$this->User->id = $id;
+		$this->set('videos', $this->Video->find('all', 
+				array('conditions' => array('Video.user_id' => $id))));	
+	}
+
+	function lista_profe($id = null)
+	{
+		$this->User->id = $id;
+		$this->set('profes', $this->User->find('all',
+				array('conditions' => array('User.tipo' => 0))));	
+	}
+
+	function listacar($id = null){
+	$this->set('videos', $this->Video->find('all', 
+				array('conditions' => array('User.carrera_id' => $id))));	
+	}
+
+	function view_video($id = null) {
+		$this->Video->id = $id;
+		$this->set('video', $this->Video->read());
+		$this->Historiale->saveField('user_id', $this->Session->read('Auth.User.id'));
+		$this->Historiale->saveField('video_id', $id);
+	}
+
+	function viewuser() {
+		$this->User->id = $this->Auth->User('id');
+		$this->set('user', $this->User->read());
+	}
+
+	function viewprofe($id = null)
+	{
+	  $this->User->id = $id;
+      $this->set('user', $this->User->read());
+	}
+}
+?>
+\end{verbatim}
+
+VideoController.php: este código contiene todas las funciones relacionas con la administración del video, 
+subir, borrar y ver el video.\\
+\footnotesize
+\begin{verbatim}
+<?php
+class VideoController extends AppController {
+	var $helpers = array('Form', 'Html', 'Time','Session');
+	var $name = 'Video';
+	var $components = array ('Auth','Session');
+	var $uses = array('User', 'Video','Alumno','Profe');
+
+	function index() {
+		$this->set('videos', $this->Video->find('all'));
+	}
+
+	function view_video($id = null) 
+	{
+		$this->Video->id = $id;
+		$this->set('video', $this->Video->read());	
+	}
+																				
+	function delete($id) 
+	{
+		if ($this->Video->delete($id))
+		{
+			$this->Session->setFlash('El video fue borrado.');
+			$this->redirect(array('action'=>'index'));
+		}
+	}
+
+	function add() 
+	{
+		if (!empty($this->data))
+		{
+			$currentFile = $this->params['data']['File'];
+			$filePath = WWW_ROOT . 'videos/' . $currentFile['name']; 
+			$movie = new ffmpeg_movie($currentFile['tmp_name']);
+			$dur = $movie->getDuration();
+			$hor = floor($dur/3600);
+			$min = (($dur / 60) % 60);
+			$sec = ($dur % 60);
+			$duracion['hor'] = str_pad($hor, 2,"0", STR_PAD_LEFT);
+			$duracion['min'] = str_pad($min, 2,"0", STR_PAD_LEFT);
+			$duracion['sec'] = str_pad($sec, 2,"0", STR_PAD_LEFT);
+			$duracion = implode(':',$duracion);
+			 if (is_uploaded_file($currentFile['tmp_name']) && 
+				 move_uploaded_file($currentFile['tmp_name'], $filePath) &&
+ 				 $this->Video->save($this->data) && 
+				 $this->Video->saveField('duracion', $duracion) &&
+ 				 $this->Video->saveField('link', 'videos/' . $currentFile['name']))
+ 			{ 	
+				$this->Session->setFlash('El video fue subido correctamente');
+			} 
+		}
+	}
+}
+?>
+\end{verbatim}
+
+PostController.php: este código contiene todas las funciones relacionas con la administración del post, 
+subir, borrar y ver el post.\\
+\footnotesize
+\begin{verbatim}
+<?php class PostsController extends AppController {
+	public $helpers = array('Html','Form','Session'); 
+	var $components = array ('Auth','Session'); 
+	var $uses = array('Post','User', 'Alumno');
+	function index() {
+		$this->set('posts', $this->Post->find('all'));
+	}
+
+	public function view($id = null) {
+		$this->Post->id = $id;
+	    $this->set('post', $this->Post->read());
+	}
+
+	public function add() {
+		$this->Post->create();
+		if ($this->request->is('post')) {
+			if ($this->Post->save($this->request->data)) {
+				$this->Session->setFlash('Tu post fue guardado');
+				$this->redirect(array('action' => 'index'));
+			}
+		}
+	}
+
+	function edit($id = null) {
+		$this->Post->id = $id;
+	    if ($this->request->is('get')) {
+			$this->request->data = $this->Post->read();
+		} 
+		else 
+		{
+			if ($this->Post->save($this->request->data)) 
+				$this->Session->setFlash('Your post has been updated.');
+				$this->redirect(array('action' => 'index'));
+		}
+	 }
+	}
+
+	function delete($id) {
+	    if (!$this->request->is('post')) 
+		{
+			throw new MethodNotAllowedException();
+		}
+		if ($this->Post->delete($id)) 
+		{
+			$this->Session->setFlash('Post con id: ' . $id . ' ha sido borrado.');
+			$this->redirect(array('action' => 'index'));
+	  }
+	}
+
+	function lista_posts ($id = null){
+		$this->User->id = $id;
+		$this->set('posts', $this->Post->find('all', 
+				array('conditions' => array('Post.user_id' => $id))));
+	}
+}
+?>
+\end{verbatim}
+
+\normalsize
+Las vistas son lo que los usuarios finales ven, acá se despliega la información obtenida de los controladores 
+y se obtiene los datos para ser guardados en la Base de Datos, la interface para subir video y ver streaming. 
+Los index son la página principal de cada modelo donde se comienza la navegación.\\
+
+A continuación se describirán los códigos más importantes.\\
+
+\paragraph{Del Modelo User:\\}
+
+Login.ctp: este código contiene el formulario de ingreso a la pagina, los tres tipos de usuarios ingresan, 
+a través de está intreface y son dirigidos hacia sus modelos correspondientes.\\
+
+Add.ctp: este código despliega el formulario de ingreso de un nuevo usuario.\\
+
+\paragraph{Del Modelo Alumno:\\}
+
+Index.ctp: contiene la interface con las opciones del alumno, revisar la lista de profesores, ver 
+su perfil o revisar su historial.\\
+
+Los códigos de listas, despliegan la totalidad de registros asociados a la petición.\\
+
+\paragraph{Del Modelo Profesor.\\}
+
+Indes.ctp: este código contiene el despliegue de opciones para el profesor, como ver su perfil, video,
+publicaciones y transmitir.\\
+
+Transmitir.ctp: este código muestra la reproducción del video que se transmite y muestra el chat para que se 
+pueda responder preguntas.\\
+
+Los demás códigos realizan las acciones especificadas en el controlador.\\
+
+\paragraph{Del Modelo Video:\\ }
+
+View\_video: muetra la reproducción del video.\\
+
+Add.ctp: contiene el código para subir un nuevo video.\\
+
+\paragraph{Del modelo Post.\\}
+
+Contiene las vistas para mostrar un publicación, subirla, editarla y borrarla.\\
+
+\paragraph{Del servicio Websocket para el chat:\\}
+
+Server.php: este código muestra las configuaraciones y funciones necesarias para el paso de mensajes 
+generando un chat.\\
+
+class.PHPWebSocket.php: este código contiene las funciones para trabajar con websocktes.\\
+
+Fancywebsocket.js: contiene los script necesarios para el chat.\\
+
+\paragraph{Del estilo:\\}
+
+cake.generic.css: este código contiene la interfaz grafica para todas las paginas realizadas a través de CakePHP.\\
+
+Los demás códigos contenidos en la carpeta de Cake, son propios del framework y ayudan a la funcionalidad de este, 
+por ejemplo el Modelo Auth y su controlador, manejan el servicio de Autenticación, sin necesidad de programarlo.\\
+
 \subsection{Otras Consideraciones}
 -	Para completar el proyecto aun falta todo lo que son las vistas e interfaces de usuario, que es lo que quedaría 
 para hacer en esta segunda parte del proyecto.\\
@@ -450,26 +795,34 @@ para hacer en esta segunda parte del proyecto.\\
 -	Sería ideal poder establecer esta aplicación para dispositivos móviles, en donde por ejemplo el 
 cliente-profesor pudiera realizar una clase on-line a través de su móvil, ya sea un iphone, o ipad, smartphones, entre otros.\\
 
+-	Los videos para ser cargados en el servidor deben ser en formato .mp4.\\
 
 \newpage
 \section{Conclusiones\\}
 Respecto a lo que va del proyecto se puede indicar lo siguiente:\\
 -	El proyecto está funcional, sus partes principales que son diferenciación de cuentas 
 mediante login, acceso a las las distintas funciones pertinentes, poder subir y ver videos, realizar
-el streaming-media, entre otros, están operativas.\\
+el streaming-media, realizar publicaciones, entre otros, están operativas.\\
 
--	En general se puede decir que en cuanto a avance del proyecto este se encuentra en un 60\%, 
-considerando que el resto del proyecto es generar las vistas de usuario de manera mucho mas amigable 
-para este, y hacer una interfaz mucho mas amena y accesible.\\
+-	En general se puede decir que en cuanto a avance del proyecto este se encuentra en un 85\%, 
+considerando que el resto del proyecto es generar las vistas de forma aun mas atractivas para el usuario,
+el cual en este caso debieremos estar ayudados por algún dise\~nador gráfico o alguien entendido en el aspecto
+visual.\\
 
--	En caso de que el tiempo propuesto para la segunda fase del proyecto sea favorable, se podría 
-planear desarrollar parte de la aplicación para un dispositivo móvil, en base a realizar un streaming 
-mediante este dispositivo.\\
+-	En cuanto al desarrollo del proyecto, la parte más problemática fue la integración de las partes que
+se encontraban por separado ya que, al utilizar el framework CakePHP, este tenia ciertas restricciones 
+que nos limitaban, no era tan simple realizar las acciones en php simplemente y despuescomenzar a enlazar,
+habia que entender a cabalidad primero como funcionaba el controlador del framework y la relacion junto con el 
+modelo para luego generar las vistas.\\
 
--	Al ser esta primera entrega parte de un prototipo avanzado del total del proyecto, podría ocurrir
-que existieran pueque\~nas modificaciones en cuanto a la implementacion actual tanto de las 
-componentes, de las consideraciones, y del modelo planteado, debido a que se quiere que sea un
-sistema robusto, podrían ir surgiendo nuevas ideas y nuevas formas de atacar los distintos problemas.\\
+-	Tambien a modo de crítica grupal es lo referente a la asignación de tareas, mejorar las habilidades blandas,
+principalmente la comunicacion entre los integrantes del grupo, ya que hubieron varias descoordinaciones.\\
+
+-	Y a modo de mejorar el sistema sería principalmente implementar de mejor forma el asunto de las vistas ya que 
+aunque intentamos varios cambios en cuanto a mejorar el aspecto gráfico, no era del todo convincente las 
+modificaciones que se realizaban en las plantillas css.\\
+
+-	Repositorio Git en https://github.com/adansio/v-stream-o
 
 
 
@@ -479,43 +832,150 @@ sistema robusto, podrían ir surgiendo nuevas ideas y nuevas formas de atacar lo
 \newpage
 \begin{figure}
   \centering
-      \includegraphics[width=1.0\textwidth]{diegramaNavegabilidad}
-	    \caption{Esquema Navegacional}
-	\label{fig:diagrama_Navegabilidad}
+      \includegraphics[width=1.0\textwidth]{Nav}
+	    \caption{Esquema Navegacional.}
+	\label{fig:Nav}
 \end{figure}
 
 \begin{figure}
   \centering
-      \includegraphics[width=0.8\textwidth]{vista}
-	    \caption{Prototipo de pantalla 1}
-	\label{fig:vista}
+      \includegraphics[width=0.8\textwidth]{vistas/administrador}
+	    \caption{Vista de Administrador.}
+	\label{fig:Admin}
 \end{figure}
 
 \begin{figure}
   \centering
-      \includegraphics[width=0.8\textwidth]{login}
-	    \caption{Prototipo de pantalla 2}
+      \includegraphics[width=0.8\textwidth]{vistas/login}
+	    \caption{Vista de login.}
 	\label{fig:login}
 \end{figure}
 
 \begin{figure}
   \centering
-      \includegraphics[width=1.0\textwidth]{DiegramaClases}
-	    \caption{Diagrama de Clases}
-	\label{fig:DiagramaClases}
+      \includegraphics[width=0.8\textwidth]{vistas/listaprofesAdmin}
+	    \caption{Lista de profesores desde Administrador}
+	\label{fig:lista_prof_admin}
 \end{figure}
 
 \begin{figure}
   \centering
-      \includegraphics[width=0.7\textwidth]{flujo}
-	    \caption{Diagrama de Flujo}
-	\label{fig:diagramaflujo}
+      \includegraphics[width=0.8\textwidth]{vistas/ListaPublicaciones}
+	    \caption{Lista de Publicaciones}
+	\label{fig:lista_pub}
 \end{figure}
 
 \begin{figure}
   \centering
-      \includegraphics[width=1.0\textwidth]{modelo}
-	    \caption{Modelo de Datos}
+      \includegraphics[width=0.8\textwidth]{vistas/ListaVideo}
+	    \caption{Lista de Video}
+	\label{fig:lista_vid}
+\end{figure}
+
+\begin{figure}
+  \centering
+      \includegraphics[width=0.8\textwidth]{vistas/Subir_Post}
+	    \caption{Vista de Agregar un post como profesor.}
+	\label{fig:add_post}
+\end{figure}
+
+\begin{figure}
+  \centering
+      \includegraphics[width=0.8\textwidth]{vistas/VerPost}
+	    \caption{Vista de Post.}
+	\label{fig:ver_post}
+\end{figure}
+
+\begin{figure}
+  \centering
+      \includegraphics[width=0.8\textwidth]{vistas/streamin}
+	    \caption{Vista de Streaming.}
+	\label{fig:streaming}
+\end{figure}
+
+\begin{figure}
+  \centering
+      \includegraphics[width=0.8\textwidth]{vistas/vervideo}
+	    \caption{Vista de ver Video.}
+	\label{fig:ver_video}
+\end{figure}
+
+
+\begin{figure}
+  \centering
+      \includegraphics[width=0.8\textwidth]{vistas/subir_video}
+	    \caption{Vista de subir video como profesor.}
+	\label{fig:add_video}
+\end{figure}
+
+
+\begin{figure}
+  \centering
+      \includegraphics[width=1.0\textwidth]{Clases}
+	    \caption{Diagrama de Clases.}
+	\label{fig:Clases}
+\end{figure}
+
+\begin{figure}
+  \centering
+      \includegraphics[width=0.6\textwidth]{secuencia/AlumnoPublicaciones}
+	    \caption{Secuencia de Alumno Publicaciones.}
+	\label{fig:al_publ}
+\end{figure}
+
+\begin{figure}
+  \centering
+      \includegraphics[width=0.6\textwidth]{secuencia/AlumnoVideo}
+	    \caption{Secuencia Alumno Video.}
+	\label{fig:al_vid}
+\end{figure}
+
+\begin{figure}
+  \centering
+      \includegraphics[width=0.6\textwidth]{secuencia/BorrarUsuario}
+	    \caption{Secuencia Borrar Usuario}
+	\label{fig:sec_del_user}
+\end{figure}
+
+\begin{figure}
+  \centering
+      \includegraphics[width=0.6\textwidth]{secuencia/BorrarVideo}
+	    \caption{Secuencia de Borrar Video.}
+	\label{fig:del_vid}
+\end{figure}
+
+\begin{figure}
+  \centering
+      \includegraphics[width=0.6\textwidth]{secuencia/IngresarUsuario}
+	    \caption{Secuencia Ingresar Usuario.}
+	\label{fig:ing_user}
+\end{figure}
+\clearpage
+\begin{figure}
+  \centering
+      \includegraphics[width=0.6\textwidth]{secuencia/PublicacionesProfe}
+	    \caption{Secuencia Publicaciones Profesor.}
+	\label{fig:sec_pub_prof}
+\end{figure}
+
+\begin{figure}
+  \centering
+      \includegraphics[width=0.6\textwidth]{secuencia/SubirVideoProfe}
+	    \caption{Secuencia de Subir Videos.}
+	\label{fig:sub_vid}
+\end{figure}
+
+\begin{figure}
+	\centering
+      \includegraphics[width=0.6\textwidth]{secuencia/TransmitirProfe}
+	    \caption{Secuencia de Streaming desde profesor.}
+	\label{fig:str_pr}
+\end{figure}
+
+\begin{figure}
+  \centering
+      \includegraphics[width=0.7\textwidth]{vistas/modelodedatos}
+	    \caption{Modelo de datos.}
 	\label{fig:moddatos}
 \end{figure}
 
