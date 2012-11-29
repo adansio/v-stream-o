@@ -6,7 +6,7 @@ var $helpers = array('Form', 'Html', 'Time');
 	
 	
 	public function isAuthorized($user){
-			if(in_array($this->action, array('index','view','viewuser', 'deleteuser', 'deletevideo', 'lista_profe', 'lista_videos' ))){
+			if(in_array($this->action, array('index','view','viewuser', 'deleteuser', 'deletevideo', 'lista_users', 'lista_videos' ))){
 				if($user['tipo'] == 2 ){
 					return true;
 				}
@@ -35,7 +35,7 @@ var $helpers = array('Form', 'Html', 'Time');
 		}
 	}
 	
-	function lista_profe(){
+	function lista_users(){
 		
 		$this->set('users', $this->User->find('all'));
 		

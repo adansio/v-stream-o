@@ -5,7 +5,7 @@
 
 
 
-<div class="boton"><?php echo $this->Html->link('Lista de Profesores', array('controller' => 'admin','action' => 'lista_profe')); ?></div>
+<div class="boton"><?php echo $this->Html->link('Lista de Usuarios', array('controller' => 'admin','action' => 'lista_users')); ?></div>
 
 <div class="boton"><?php echo $this->Html->link('Lista de Videos', array('controller' => 'admin','action' => 'lista_videos')); ?></div>
 

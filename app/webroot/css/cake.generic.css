@@ -268,7 +268,7 @@ a:hover {
 #content {
 	border-top:1px solid #CCCCCC;
 	width:760px;
-	height: 500px;
+	min-height: 500px;
 	clear:both;
 }
 
@@ -291,7 +291,7 @@ a:hover {
 	color: #FFFFFF;
 	background-color:#6699FF;
 	font-size:80%;
-	line-height:150%;
+	line-height:200%;
 	width: 760px;
 	clear:both;
 }
